@@ -12,8 +12,24 @@
       "dest": "/api/index.js"
     },
     {
-      "src": "/(.*)",
+      "src": "/js/(.*)",
+      "dest": "/frontend/app.js"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/frontend/styles.css"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/frontend/images/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg))",
       "dest": "/frontend/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/index.html"
     }
   ],
   "env": {

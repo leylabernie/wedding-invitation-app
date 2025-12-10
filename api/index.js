@@ -1,30 +1,45 @@
 // Vercel serverless function entry point
 require('dotenv').config();
 
-// Import the backend app
-const app = require('../backend/server.js');
+const express = require('express');
+const cors = require('cors');
 
-// Initialize database for serverless environment
-const connectDB = require('../backend/config/database');
+// Create a minimal Express app for serverless
+const app = express();
 
-let isDbConnected = false;
+// Basic middleware for serverless
+app.use(cors());
+app.use(express.json());
 
-const ensureDbConnection = async () => {
-  if (!isDbConnected) {
-    try {
-      await connectDB();
-      isDbConnected = true;
-      console.log('Database connected for serverless function');
-    } catch (error) {
-      console.error('Database connection failed:', error);
-    }
-  }
-};
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'OK', 
+    timestamp: new Date().toISOString(),
+    environment: 'serverless'
+  });
+});
 
-// Export the serverless function
-module.exports = async (req, res) => {
-  // Ensure database is connected
-  await ensureDbConnection();
+// Mock API endpoints for testing
+app.get('/api/auth/test', (req, res) => {
+  res.json({ message: 'Auth endpoint working' });
+});
+
+app.get('/api/events/test', (req, res) => {
+  res.json({ message: 'Events endpoint working' });
+});
+
+// Catch all other API routes
+app.use('/api/*', (req, res) => {
+  res.status(404).json({ 
+    error: 'API endpoint not found',
+    path: req.originalUrl 
+  });
+});
+
+// Export the serverless function handler
+module.exports = (req, res) => {
+  console.log(`🚀 Serverless function called: ${req.method} ${req.url}`);
   
   // Handle CORS headers for Vercel
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -35,5 +50,13 @@ module.exports = async (req, res) => {
     return res.status(200).end();
   }
   
-  return app(req, res);
+  try {
+    app(req, res);
+  } catch (error) {
+    console.error('Serverless function error:', error);
+    res.status(500).json({ 
+      error: 'Internal Server Error',
+      message: error.message 
+    });
+  }
 };

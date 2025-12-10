@@ -74,8 +74,8 @@ app.use('*', (req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-// For Vercel serverless deployment
-if (process.env.NODE_ENV !== 'production') {
+// For Vercel serverless deployment - only start server if not in production and not imported as module
+if (process.env.NODE_ENV !== 'production' && require.main === module) {
   const PORT = process.env.PORT || 5000;
   
   // Initialize database and start server

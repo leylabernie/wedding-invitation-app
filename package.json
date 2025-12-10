@@ -2,7 +2,7 @@
   "name": "wedding-invitation-app",
   "version": "1.0.0",
   "description": "Full-stack wedding invitation application",
-  "main": "backend/server.js",
+  "main": "api/index.js",
   "scripts": {
     "build": "cd backend && npm install",
     "start": "cd backend && npm start",
@@ -13,5 +13,13 @@
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "express-rate-limit": "^7.1.5",
+    "dotenv": "^16.4.5"
   }
 }
