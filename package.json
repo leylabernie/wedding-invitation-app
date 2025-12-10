@@ -1,0 +1,17 @@
+{
+  "name": "wedding-invitation-app",
+  "version": "1.0.0",
+  "description": "Full-stack wedding invitation application",
+  "main": "backend/server.js",
+  "scripts": {
+    "build": "cd backend && npm install",
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev"
+  },
+  "keywords": ["wedding", "invitation", "fullstack", "vercel"],
+  "author": "Leyla Bernie",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

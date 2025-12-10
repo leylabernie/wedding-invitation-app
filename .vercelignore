@@ -1,0 +1,10 @@
+# Exclude backend node_modules from Vercel build
+backend/node_modules
+node_modules
+.git
+user_input_files
+*.log
+.env
+.env.local
+.DS_Store
+uploads
