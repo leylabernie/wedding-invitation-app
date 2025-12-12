@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guest List Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style>
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+      }
+      .gradient-bg {
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+      }
+      .dark .gradient-bg {
+        background-image: linear-gradient(120deg, #2d3748 0%, #4a5568 100%);
+      }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#374151", // Dark gray from the screenshot's selected tab icon
+              "background-light": "#F7F8FA",
+              "background-dark": "#1F2937",
+            },
+            fontFamily: {
+              display: ["Cormorant Garamond", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem", // 16px
+            },
+          },
+        },
+      };
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans">
+<div class="max-w-sm mx-auto bg-background-light dark:bg-background-dark shadow-lg rounded-3xl overflow-hidden h-[844px] flex flex-col">
+<div class="flex-grow p-6 pt-4 relative overflow-y-auto">
+<header class="flex items-center justify-between py-4">
+<button class="text-gray-800 dark:text-gray-200">
+<span class="material-icons">arrow_back_ios_new</span>
+</button>
+<h1 class="text-3xl font-display font-semibold text-gray-800 dark:text-gray-200">Guest List</h1>
+<button class="text-gray-800 dark:text-gray-200">
+<span class="material-icons">search</span>
+</button>
+</header>
+<div class="grid grid-cols-3 gap-3 my-4">
+<div class="bg-white/50 dark:bg-gray-700/50 p-3 rounded-lg text-center backdrop-blur-sm">
+<p class="text-xs text-gray-500 dark:text-gray-400">TOTAL</p>
+<p class="text-2xl font-bold text-gray-800 dark:text-gray-100">120</p>
+</div>
+<div class="bg-white/50 dark:bg-gray-700/50 p-3 rounded-lg text-center backdrop-blur-sm">
+<p class="text-xs text-gray-500 dark:text-gray-400">CONFIRMED</p>
+<p class="text-2xl font-bold text-green-600 dark:text-green-400">82</p>
+</div>
+<div class="bg-white/50 dark:bg-gray-700/50 p-3 rounded-lg text-center backdrop-blur-sm">
+<p class="text-xs text-gray-500 dark:text-gray-400">PENDING</p>
+<p class="text-2xl font-bold text-yellow-600 dark:text-yellow-400">38</p>
+</div>
+</div>
+<div class="flex justify-between items-center mb-4">
+<p class="text-gray-600 dark:text-gray-300">All Guests</p>
+<button class="flex items-center text-gray-600 dark:text-gray-300">
+<span class="material-icons text-lg">filter_list</span>
+<span class="ml-1">Filter</span>
+</button>
+</div>
+<div class="space-y-3">
+<div class="bg-white/60 dark:bg-gray-700/60 p-4 rounded-lg flex items-center justify-between backdrop-blur-sm">
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-100">Eleanor Vance</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Family of the Bride</p>
+</div>
+<div class="flex items-center space-x-2">
+<span class="text-xs font-medium text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/50 px-2 py-1 rounded-full">Confirmed</span>
+<span class="material-icons text-gray-400 dark:text-gray-500">more_vert</span>
+</div>
+</div>
+<div class="bg-white/60 dark:bg-gray-700/60 p-4 rounded-lg flex items-center justify-between backdrop-blur-sm">
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-100">Oliver Chen</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Friend of the Groom</p>
+</div>
+<div class="flex items-center space-x-2">
+<span class="text-xs font-medium text-yellow-700 dark:text-yellow-400 bg-yellow-100 dark:bg-yellow-900/50 px-2 py-1 rounded-full">Pending</span>
+<span class="material-icons text-gray-400 dark:text-gray-500">more_vert</span>
+</div>
+</div>
+<div class="bg-white/60 dark:bg-gray-700/60 p-4 rounded-lg flex items-center justify-between backdrop-blur-sm">
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-100">Isabella Rossi</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Friend of the Bride</p>
+</div>
+<div class="flex items-center space-x-2">
+<span class="text-xs font-medium text-red-700 dark:text-red-400 bg-red-100 dark:bg-red-900/50 px-2 py-1 rounded-full">Declined</span>
+<span class="material-icons text-gray-400 dark:text-gray-500">more_vert</span>
+</div>
+</div>
+<div class="bg-white/60 dark:bg-gray-700/60 p-4 rounded-lg flex items-center justify-between backdrop-blur-sm">
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-100">James Smith &amp; Family</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Family of the Groom (+2)</p>
+</div>
+<div class="flex items-center space-x-2">
+<span class="text-xs font-medium text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/50 px-2 py-1 rounded-full">Confirmed</span>
+<span class="material-icons text-gray-400 dark:text-gray-500">more_vert</span>
+</div>
+</div>
+<div class="bg-white/60 dark:bg-gray-700/60 p-4 rounded-lg flex items-center justify-between backdrop-blur-sm">
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-100">Sophia Williams</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Friend of the Bride</p>
+</div>
+<div class="flex items-center space-x-2">
+<span class="text-xs font-medium text-yellow-700 dark:text-yellow-400 bg-yellow-100 dark:bg-yellow-900/50 px-2 py-1 rounded-full">Pending</span>
+<span class="material-icons text-gray-400 dark:text-gray-500">more_vert</span>
+</div>
+</div>
+</div>
+</div>
+<nav class="bg-white/70 dark:bg-gray-800/70 border-t border-gray-200 dark:border-gray-700 backdrop-blur-md">
+<div class="max-w-md mx-auto px-4">
+<div class="flex justify-around">
+<a class="flex flex-col items-center justify-center text-center text-gray-500 dark:text-gray-400 py-3 w-1/4" href="#">
+<span class="material-icons">home</span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-center text-gray-500 dark:text-gray-400 py-3 w-1/4" href="#">
+<span class="material-icons">palette</span>
+<span class="text-xs">Design</span>
+</a>
+<a class="flex flex-col items-center justify-center text-center text-primary dark:text-white py-3 w-1/4 relative" href="#">
+<div class="w-12 h-1 bg-primary dark:bg-white rounded-full absolute -top-[1px]"></div>
+<span class="material-icons">groups</span>
+<span class="text-xs font-bold">Guests</span>
+</a>
+<a class="flex flex-col items-center justify-center text-center text-gray-500 dark:text-gray-400 py-3 w-1/4" href="#">
+<span class="material-icons">settings</span>
+<span class="text-xs">Settings</span>
+</a>
+</div>
+</div>
+<div class="pb-3 pt-2">
+<div class="w-32 h-1.5 bg-gray-400 dark:bg-gray-600 rounded-full mx-auto"></div>
+</div>
+</nav>
+</div>
+
+</body></html>

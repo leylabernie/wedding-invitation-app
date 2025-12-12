@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Color Palette</title>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts for a closer match to the image -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Custom Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'brand-bg': '#F7F4F0',
+            'brand-gold': '#C4A464',
+            'brand-gold-light': '#D4C09A',
+            'brand-text': '#333333',
+            'brand-pink': '#DDA7A9',
+            'brand-blue': '#6A87A1',
+            'brand-dark-gray': '#3C3F43',
+            'brand-ivory': '#FAF6ED',
+            'brand-ivory-dark': '#F5EEDF',
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-brand-bg font-sans text-brand-text">
+<div class="relative min-h-screen pb-28" id="app-wrapper">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-3 border-gray-200 bg-brand-bg">
+<!-- Back Button -->
+<button class="p-2 -ml-2">
+<svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Page Title -->
+<h1 class="text-lg font-semibold text-center text-brand-text">Color Palette</h1>
+<!-- Save Button -->
+<button class="px-4 py-1.5 text-sm font-semibold text-white bg-brand-gold rounded-md shadow-sm">
+        Save
+      </button>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="pt-20 px-4">
+<!-- BEGIN: LivePreview Section -->
+<section class="mb-8" data-purpose="live-preview-section">
+<h2 class="text-lg font-semibold mb-3">Live Preview</h2>
+<div class="bg-brand-ivory p-4 rounded-xl shadow-sm">
+<!-- Placeholder for the wedding invitation image -->
+<img alt="Wedding Invitation Preview" class="w-full h-auto rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_eXfStbdO5uGMG8hKrBAav6FFKvQLdM2YUeGO_3yFKs6Amr4JgNBwTx6UB9JHNYr8NExdOuZqlGYliYQOP5KZz3JqkYMytrcRMiWVMLIX65Ba8aLn6eH5EEluKHb9dV330Lli8ZfDeLb6cD9KyRFVHoKFDkAbzz1gFLFWNtGHKTvHF_S_8svgDNDnklQRj6xlzEWj869wPAKZewBRgcaLSXym4J6iEmhvqWBQV5RwQ0xDnGXi84W1DqpwWxTZqkoHmc2MZXb2Km4N"/>
+</div>
+</section>
+<!-- END: LivePreview Section -->
+<!-- BEGIN: PresetPalettes Section -->
+<section class="mb-8" data-purpose="preset-palettes-section">
+<h2 class="text-lg font-semibold mb-3">Preset Palettes</h2>
+<div class="flex items-center space-x-2 overflow-x-auto pb-2">
+<!-- Selected Palette Button -->
+<button class="flex items-center whitespace-nowrap bg-white border border-brand-gold text-brand-text font-medium py-2 px-4 rounded-full text-sm">
+<svg class="h-4 w-4 mr-1.5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+</svg>
+            Ethereal Ivory
+            <span class="ml-2 w-5 h-5 rounded-full bg-white border border-gray-300"></span>
+</button>
+<!-- Other Palette Buttons -->
+<button class="flex items-center whitespace-nowrap bg-white border border-gray-300 text-gray-600 font-medium py-2 px-4 rounded-full text-sm">
+            Blush &amp; Gold
+            <span class="flex items-center justify-center ml-2 w-5 h-5 rounded-full overflow-hidden border border-gray-300">
+<span class="w-1/2 h-full bg-[#E5C4C5]"></span>
+<span class="w-1/2 h-full bg-[#D4C09A]"></span>
+</span>
+</button>
+<button class="flex items-center whitespace-nowrap bg-white border border-gray-300 text-gray-600 font-medium py-2 px-4 rounded-full text-sm">
+            Celestial Dream
+            <span class="flex items-center justify-center ml-2 w-5 h-5 rounded-full overflow-hidden border border-gray-300">
+<span class="w-1/2 h-full bg-[#A9B8C5]"></span>
+<span class="w-1/2 h-full bg-[#525F6B]"></span>
+</span>
+</button><button class="flex items-center whitespace-nowrap bg-white border border-gray-300 text-gray-600 font-medium py-2 px-4 rounded-full text-sm">Mystic Garden</button>
+</div>
+</section>
+<!-- END: PresetPalettes Section -->
+<!-- BEGIN: CustomColors Section -->
+<section data-purpose="custom-colors-section">
+<h2 class="text-lg font-semibold mb-3">Custom Colors</h2>
+<div class="bg-white p-4 rounded-lg shadow-sm space-y-2">
+<!-- Background Color Row -->
+<div class="flex items-center justify-between pb-3 border-b">
+<span class="text-base">Background Color</span>
+<div class="flex items-center space-x-2">
+<div class="w-7 h-7 rounded-full bg-[#F8F0F0]"></div>
+<div class="w-7 h-7 rounded-full bg-brand-ivory-dark border-2 border-brand-gold ring-4 ring-brand-gold/30"></div>
+<div class="w-7 h-7 rounded-full bg-[#F5F1E0]"></div>
+<div class="w-7 h-7 rounded-full bg-[#EAEBE6]"></div>
+<div class="w-7 h-7 rounded-full bg-[#F9F5EA]"></div>
+<div class="w-7 h-7 rounded-full bg-[#F0F2F5]"></div>
+</div>
+</div>
+<!-- Primary Color Row -->
+<div class="flex items-center justify-between py-2 border-b">
+<span class="text-base">Primary Color</span>
+<div class="flex items-center space-x-3">
+<div class="w-7 h-7 rounded-full bg-brand-pink"></div>
+<button class="px-4 py-1 text-xs font-medium bg-gray-50 border border-gray-200 text-gray-500 rounded-md">Change</button>
+</div>
+</div>
+<!-- Secondary Color Row -->
+<div class="flex items-center justify-between py-2 border-b">
+<span class="text-base">Secondary Color</span>
+<div class="flex items-center space-x-3">
+<div class="w-7 h-7 rounded-full bg-brand-blue"></div>
+<button class="px-4 py-1 text-xs font-medium bg-gray-50 border border-gray-200 text-gray-500 rounded-md">Change</button>
+</div>
+</div>
+<!-- Gold/Accent Color Row -->
+<div class="flex items-center justify-between py-2 border-b">
+<span class="text-base">Gold/Accent Color</span>
+<div class="flex items-center space-x-3">
+<div class="w-7 h-7 rounded-full bg-brand-gold"></div>
+<button class="px-4 py-1 text-xs font-medium bg-gray-50 border border-gray-200 text-gray-500 rounded-md">Change</button>
+</div>
+</div>
+<!-- Text Color Row -->
+<div class="flex items-center justify-between pt-2">
+<span class="text-base">Text Color</span>
+<div class="flex items-center space-x-3">
+<div class="w-7 h-7 rounded-full bg-brand-dark-gray"></div>
+<button class="px-4 py-1 text-xs font-medium bg-gray-50 border border-gray-200 text-gray-500 rounded-md">Change</button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CustomColors Section -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="fixed bottom-0 left-0 right-0 z-10 bg-white px-4 py-3 border-t border-gray-200">
+<div class="flex items-center space-x-3">
+<!-- Reset Button -->
+<button class="flex-1 py-3 text-center text-sm font-semibold bg-gray-50 border border-gray-200 text-gray-500 rounded-lg">
+          Reset to Default
+        </button>
+<!-- Continue Button -->
+<button class="flex-1 py-3 text-center text-sm font-semibold bg-gradient-to-b from-[#D4C09A] to-[#C4A464] text-white rounded-lg shadow-md">
+          Continue
+        </button>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</div>
+</body></html>

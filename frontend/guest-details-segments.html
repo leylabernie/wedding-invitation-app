@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add/Edit Guest Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 24
+      }
+      .material-symbols-outlined.fill {
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#A38F79",
+              "background-light": "#F7F5F3",
+              "background-dark": "#1A1816",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#2C2A28",
+              "text-light": "#1C1B1A",
+              "text-dark": "#E6E2E0",
+              "subtle-light": "#79747E",
+              "subtle-dark": "#C9C5C2",
+              "border-light": "#E0E0E0",
+              "border-dark": "#444444"
+            },
+            fontFamily: {
+              display: ["Cormorant Garamond", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans">
+<div class="mx-auto w-full max-w-sm rounded-[2.5rem] bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark shadow-2xl overflow-hidden">
+<div class="relative min-h-[844px] bg-gradient-to-br from-rose-50/50 via-amber-50/50 to-blue-50/50 dark:from-rose-900/10 dark:via-amber-900/10 dark:to-blue-900/10 flex flex-col">
+<header class="flex-shrink-0 px-4 pt-12 pb-4">
+<div class="flex items-center justify-between">
+<button class="p-2 -ml-2">
+<span class="material-symbols-outlined text-3xl text-text-light dark:text-text-dark">arrow_back_ios_new</span>
+</button>
+<div class="flex-1 text-center">
+<h1 class="font-display text-3xl font-semibold">Guest Details</h1>
+</div>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-grow px-6 pb-4 space-y-5 overflow-y-auto">
+<div class="relative">
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark mb-1" for="guest-name">Guest Name</label>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-light/80 dark:bg-surface-dark/80 border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary placeholder-subtle-light/70 dark:placeholder-subtle-dark/70 backdrop-blur-sm transition-colors duration-300" id="guest-name" type="text" value="Eleanor Vance"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 mt-[2px] text-subtle-light dark:text-subtle-dark pointer-events-none">person</span>
+</div>
+<div class="relative">
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark mb-1" for="email">Email Address</label>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-light/80 dark:bg-surface-dark/80 border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary placeholder-subtle-light/70 dark:placeholder-subtle-dark/70 backdrop-blur-sm transition-colors duration-300" id="email" placeholder="example@mail.com" type="email"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 mt-[2px] text-subtle-light dark:text-subtle-dark pointer-events-none">mail</span>
+</div>
+<div class="relative">
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark mb-1" for="phone">Phone Number (Optional)</label>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-light/80 dark:bg-surface-dark/80 border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary placeholder-subtle-light/70 dark:placeholder-subtle-dark/70 backdrop-blur-sm transition-colors duration-300" id="phone" placeholder="(123) 456-7890" type="tel"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 mt-[2px] text-subtle-light dark:text-subtle-dark pointer-events-none">call</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark mb-1" for="relationship">Relationship</label>
+<select class="w-full py-3 pl-4 pr-10 bg-surface-light/80 dark:bg-surface-dark/80 border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary backdrop-blur-sm transition-colors duration-300" id="relationship">
+<option>Family</option>
+<option selected="">Friend</option>
+<option>Colleague</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark mb-1">Plus One</label>
+<div class="flex items-center justify-between h-[50px] px-4 bg-surface-light/80 dark:bg-surface-dark/80 border border-border-light dark:border-border-dark rounded-lg backdrop-blur-sm">
+<span class="text-text-light dark:text-text-dark">Allowed</span>
+<button aria-checked="true" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 bg-primary" role="switch">
+<span aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 translate-x-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark mb-1" for="segments">Segments</label>
+<div class="flex flex-wrap gap-2 pt-1">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-primary text-white transition-colors">
+<span>Family</span>
+<span class="material-symbols-outlined !text-base !font-light">close</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-surface-light/80 dark:bg-surface-dark/80 border border-border-light dark:border-border-dark text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-colors">
+<span>Friends</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-surface-light/80 dark:bg-surface-dark/80 border border-border-light dark:border-border-dark text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-colors">
+<span>Work Colleagues</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-surface-light/80 dark:bg-surface-dark/80 border border-border-light dark:border-border-dark text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-colors">
+<span class="material-symbols-outlined !text-base !font-light">add</span>
+<span>New</span>
+</button>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark mb-1" for="notes">Notes (e.g. dietary restrictions)</label>
+<textarea class="w-full p-4 bg-surface-light/80 dark:bg-surface-dark/80 border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary placeholder-subtle-light/70 dark:placeholder-subtle-dark/70 backdrop-blur-sm transition-colors duration-300" id="notes" placeholder="Add any specific notes here..." rows="3"></textarea>
+</div>
+<div class="pt-4 space-y-3">
+<button class="w-full bg-primary text-white font-semibold py-4 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300">
+                Save Changes
+            </button>
+<button class="w-full text-red-500 font-semibold py-3 rounded-full hover:bg-red-500/10 transition-colors duration-300">
+                Delete Guest
+            </button>
+</div>
+</main>
+<footer class="flex-shrink-0 w-full bg-surface-light/70 dark:bg-surface-dark/70 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50 rounded-b-[2.5rem]">
+<nav class="flex justify-around items-center h-20">
+<a class="flex flex-col items-center justify-center text-subtle-light dark:text-subtle-dark w-1/4" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-light dark:text-text-dark w-1/4" href="#">
+<span class="material-symbols-outlined fill">palette</span>
+<span class="text-xs mt-1 font-semibold">Design</span>
+</a>
+<a class="flex flex-col items-center justify-center text-subtle-light dark:text-subtle-dark w-1/4" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-xs mt-1">Guests</span>
+</a>
+<a class="flex flex-col items-center justify-center text-subtle-light dark:text-subtle-dark w-1/4" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-xs mt-1">Settings</span>
+</a>
+</nav>
+<div class="pb-6 pt-1 flex justify-center">
+<div class="w-32 h-1.5 bg-text-light dark:bg-text-dark rounded-full"></div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
