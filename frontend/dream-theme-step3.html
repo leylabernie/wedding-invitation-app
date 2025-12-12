@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale-1.0" name="viewport"/>
+<title>Dream Theme Assistant - Step 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4A5A5", // Dusty Pink base
+                        secondary: "#93C5FD", // Soft Blue base
+                        "background-light": "#EFF6FF", // Blue 50 equivalent
+                        "background-dark": "#0F172A", // Slate 900
+                        "card-light": "#FFFBF5", // Warm cream
+                        "card-dark": "#1E293B", // Slate 800
+                        "text-main": "#3F2E22", // Deep warm brown
+                        "text-dark": "#E2E8F0", // Slate 200
+                        "accent-pink": "#FCA5A5",
+                        "accent-blue": "#93C5FD"
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Lato", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        '3xl': '1.5rem',
+                        '4xl': '2rem',
+                    },
+                },
+            },
+        };
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass-nav {
+            background: rgba(30, 41, 59, 0.9);
+        }
+        .gradient-border-active {
+            position: relative;
+            z-index: 1;
+        }
+        .gradient-border-active::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: 1rem;
+            background: linear-gradient(to right, #93C5FD, #FCA5A5);
+            z-index: -1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-text-main dark:text-text-dark antialiased transition-colors duration-300">
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-blue-100 via-pink-50 to-transparent opacity-70 dark:opacity-0"></div>
+<div class="absolute -top-20 -right-20 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-10 animate-pulse"></div>
+<div class="absolute top-40 -left-20 w-80 h-80 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-10 animate-pulse" style="animation-delay: 2s;"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900 opacity-0 dark:opacity-100 transition-opacity"></div>
+</div>
+<div class="relative z-10 flex flex-col h-screen max-w-md mx-auto overflow-hidden shadow-2xl bg-white/30 dark:bg-black/20">
+<header class="flex items-center justify-between px-4 pt-12 pb-4">
+<button class="flex items-center text-text-main dark:text-white font-medium hover:opacity-70 transition-opacity">
+<span class="material-icons-outlined text-3xl mr-1">chevron_left</span>
+<span class="text-lg">Back</span>
+</button>
+<h1 class="font-display text-xl font-bold text-text-main dark:text-white tracking-wide">Dream Theme Assistant</h1>
+<div class="w-12"></div>
+</header>
+<main class="flex-1 overflow-y-auto no-scrollbar px-5 pb-32">
+<div class="text-center mb-6 mt-2">
+<h2 class="font-display text-3xl font-semibold mb-2 text-text-main dark:text-white drop-shadow-sm">
+                    Refine the details.
+                </h2>
+<p class="text-gray-600 dark:text-gray-300 text-sm max-w-xs mx-auto leading-relaxed">
+                    Select the design motifs and wording tone that resonate with your vision.
+                </p>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-3xl p-6 shadow-lg mb-6 transition-colors duration-300">
+<div class="mb-6">
+<div class="flex items-center justify-between text-xs font-medium text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wider">
+<span>Step 3 of 4: Elements &amp; Wording</span>
+</div>
+<div class="flex gap-2">
+<div class="h-1.5 flex-1 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full opacity-50"></div>
+<div class="h-1.5 flex-1 bg-gradient-to-r from-blue-300 to-purple-300 rounded-full opacity-50"></div>
+<div class="h-1.5 flex-1 bg-gradient-to-r from-purple-300 to-pink-300 rounded-full shadow-sm"></div>
+<div class="h-1.5 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="font-display text-2xl mb-4 text-text-main dark:text-white">Preferred Design Elements</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="group cursor-pointer relative rounded-xl overflow-hidden aspect-[4/3] gradient-border-active">
+<img alt="Floral arrangements with roses" class="w-full h-full object-cover rounded-[0.9rem] transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ8WxF99KiP99b9uvT4VjmzDA76qtf3ygz429qG7JI6yEoov0kkayNJsFlOHkqeARH804zSrRb_8AohA7yPPnvwIENRIbM_vmVqvDQ82K3YX7KtS5eZsmENBFPDPFEkqFyj3PcOxkLCXvY_Ql8KnDEg1sVs1QnZeA6Jv_nxG_-tPYmifsJlEEbQYVzXV7CVHYWubITXEAjFfaE7-mYt3FQAjDAchMskSFDL4veIOsB0808C4yVnVhNDBkXNBaqYQJZ6H098JP46tg8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute top-2 right-2 bg-white/20 backdrop-blur-md rounded-full p-1 border border-white/50">
+<span class="material-icons-outlined text-white text-sm">check</span>
+</div>
+<span class="absolute bottom-3 left-0 right-0 text-center text-white font-medium text-sm tracking-wide">Floral &amp; Organic</span>
+</div>
+<div class="group cursor-pointer relative rounded-xl overflow-hidden aspect-[4/3] border border-transparent hover:shadow-md transition-all">
+<img alt="Geometric patterns abstract" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwN-uAHjKF10T2KLVSW6-3zEO_ZOWcmyfN9MXsn5CiBQfHTcrJneR-8UtzVLtDjaT4hbNIN_hb7q6KwsrYiqXUkP92eNrDw7lMsbJfqzKPlSnPfqGWMiSOhyysTlouvGoF6zSwPRuxlnlaiqbg6e5PHu8R76_X6gvBD1H_kCpgDa1Jmyp2KKdk5SHUkE9ZGeYmT6gQXWfLQAqktHMSgBjFUGl74jvjwBRynByoXgc0-3DkiFbgPvv0NZHagKQ7RWaQg75Vp3-3cJ1q"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
+<div class="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute bottom-3 left-0 right-0 text-center text-white font-medium text-sm tracking-wide">Geometric</span>
+</div>
+<div class="group cursor-pointer relative rounded-xl overflow-hidden aspect-[4/3] border border-transparent hover:shadow-md transition-all">
+<img alt="Celestial moon and stars" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmv2jGJhUFgAA4Ix5rLqfJpP-85jbptB8FNw3ClYgZBh7Z-8KQFlZKVPbo0S2sP-LN0UsuIAz4Cfl1EsK-tYzAkncA_dNOK1-IEng9U0b-fIF_WqvOkf54npb0egZdu0iv7ftwVShx6iE_OesqRD5PqjiJNWatqon3SHb3cE9XCdAnhzGTRkdCAemz2T2zuss4FVTuCEQLRmXVZiE6rcCsSq96I48j6v9U5Fm7iKBW5D7KJhof734dadLDwOcuDyTqwJLgBK45Yflk"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
+<div class="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute bottom-3 left-0 right-0 text-center text-white font-medium text-sm tracking-wide">Celestial</span>
+</div>
+<div class="group cursor-pointer relative rounded-xl overflow-hidden aspect-[4/3] border border-transparent hover:shadow-md transition-all">
+<img alt="Vintage paper and lace" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4-oskxKnRzBdk92PWDy0OV7sAZWLe5p0GxJuqOrTeW39aoMrnOHxt4kMiqXGUXZ_5Rqpk5QIqH-kxYeppr5TV9t7qkUKhl_p0s3U-vyoRrPa6xnGmhvvHXZdrOG8k1XVkifExDax5h_4bO8Y11OgiYe4yCXdjzNyeTCiiUEs1vTWqoxFTkf4aLt5is_zRQmPT20dnrTSkEIOEOIM32Ez1QQ90RUM32lEN9GOJPt5RkJsqoNwXOwtoUbQpKcP31i7hmUSfMZH1KGhT"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
+<div class="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute bottom-3 left-0 right-0 text-center text-white font-medium text-sm tracking-wide">Vintage</span>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="font-display text-2xl mb-4 text-text-main dark:text-white">Desired Wording Tone</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center p-4 border rounded-2xl cursor-pointer bg-white/50 dark:bg-gray-700/50 hover:bg-white dark:hover:bg-gray-700 transition-colors border-primary/30 shadow-sm relative overflow-hidden">
+<input checked="" class="form-radio h-5 w-5 text-primary border-gray-300 focus:ring-primary mr-4" name="tone" type="radio"/>
+<div class="flex-1">
+<span class="font-display font-semibold text-text-main dark:text-white block">Formal &amp; Classic</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 italic">"Request the honour of your presence..."</span>
+</div>
+</label>
+<label class="flex items-center p-4 border rounded-2xl cursor-pointer bg-white/50 dark:bg-gray-700/50 hover:bg-white dark:hover:bg-gray-700 transition-colors border-transparent shadow-sm">
+<input class="form-radio h-5 w-5 text-primary border-gray-300 focus:ring-primary mr-4" name="tone" type="radio"/>
+<div class="flex-1">
+<span class="font-display font-semibold text-text-main dark:text-white block">Romantic &amp; Warm</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 italic">"Join us in celebrating our love..."</span>
+</div>
+</label>
+<label class="flex items-center p-4 border rounded-2xl cursor-pointer bg-white/50 dark:bg-gray-700/50 hover:bg-white dark:hover:bg-gray-700 transition-colors border-transparent shadow-sm">
+<input class="form-radio h-5 w-5 text-primary border-gray-300 focus:ring-primary mr-4" name="tone" type="radio"/>
+<div class="flex-1">
+<span class="font-display font-semibold text-text-main dark:text-white block">Modern &amp; Minimal</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 italic">"We're getting married!"</span>
+</div>
+</label>
+</div>
+</div>
+<div class="relative group">
+<input class="w-full bg-transparent border border-gray-300 dark:border-gray-600 rounded-xl py-3 px-4 pr-12 text-sm text-text-main dark:text-white placeholder-gray-400 focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="Describe specific symbols or colors..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors">
+<span class="material-icons-outlined text-xl">camera_alt</span>
+</button>
+</div>
+</div>
+<div class="h-8"></div>
+</main>
+<div class="absolute bottom-[80px] left-0 w-full px-6 pb-4 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-black dark:via-black/80 z-20 pt-8">
+<button class="w-full py-4 rounded-full bg-gradient-to-r from-blue-300 to-red-300 text-white font-bold text-lg shadow-xl shadow-pink-200/50 dark:shadow-none hover:shadow-2xl hover:scale-[1.01] transition-all transform flex items-center justify-center group">
+                Continue to Review
+                <span class="material-icons-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<nav class="absolute bottom-0 w-full bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center px-6 py-3 z-30 pb-6 glass-nav">
+<div class="flex flex-col items-center gap-1 cursor-pointer group">
+<div class="relative">
+<span class="material-icons-outlined text-gray-400 dark:text-gray-500 text-2xl group-hover:text-primary transition-colors">diamond</span>
+</div>
+<span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer group">
+<span class="material-icons-outlined text-gray-400 dark:text-gray-500 text-2xl group-hover:text-primary transition-colors">calendar_today</span>
+<span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Events</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer">
+<div class="bg-gradient-to-br from-blue-100 to-pink-100 dark:from-gray-700 dark:to-gray-600 rounded-xl p-1 -mt-4 shadow-sm border border-white dark:border-gray-600">
+<span class="material-icons-outlined text-text-main dark:text-white text-2xl">add</span>
+</div>
+<span class="text-[10px] font-bold text-text-main dark:text-white">Create</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer group">
+<span class="material-icons-outlined text-gray-400 dark:text-gray-500 text-2xl group-hover:text-primary transition-colors">favorite_border</span>
+<span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Favorites</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer group">
+<span class="material-icons-outlined text-gray-400 dark:text-gray-500 text-2xl group-hover:text-primary transition-colors">person_outline</span>
+<span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Me</span>
+</div>
+</nav>
+</div>
+
+</body></html>
