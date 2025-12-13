@@ -21,7 +21,7 @@ async def main():
         for screen in screens:
             await page.goto(f'http://localhost:8000/{screen}.html', wait_until='networkidle')
             await page.wait_for_timeout(5000)  # Wait 5 seconds for all assets to load
-            await page.screenshot(path=f'/home/jules/verification/{screen}.png')
+            await page.screenshot(path=f'verification/{screen}.png')
 
         await browser.close()
 
