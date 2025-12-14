@@ -14,8 +14,7 @@ async def main():
             'rsvp-inbox', 'color-palette', 'guest-list', 'digital-share',
             'guest-details', 'rsvp-dashboard', 'guest-segments',
             'guest-details-segments', 'digital-share-segments',
-            'dream-theme-step2', 'dream-theme-step3', 'dream-theme-summary',
-            'index'
+            'dream-theme-step2', 'dream-theme-step3', 'dream-theme-summary'
         ]
 
         for screen in screens:
