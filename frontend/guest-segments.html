@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guest Segmentation &amp; Categories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ee2b6c",
+              "background-light": "#f8f6f6",
+              "background-dark": "#221016",
+              "content-light": "#1b0d12",
+              "content-dark": "#f3e7eb",
+              "subtle-light": "#9a4c66",
+              "subtle-dark": "#a78b95",
+              "surface-light": "#fcf8f9",
+              "surface-dark": "#311821"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-3 backdrop-blur-sm">
+<button class="text-content-light dark:text-content-dark flex size-10 shrink-0 items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-content-light dark:text-content-dark ml-2 flex-1 text-lg font-bold leading-tight tracking-[-0.015em]">Guest Segments</h1>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 py-2">
+<div class="flex flex-col gap-3">
+<!-- List Item 1 -->
+<div class="flex min-h-[72px] items-center gap-4 rounded-lg bg-surface-light dark:bg-surface-dark p-3">
+<div class="flex items-center gap-4 flex-1">
+<div class="text-primary flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-2xl">family_restroom</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-content-light dark:text-content-dark text-base font-medium leading-normal line-clamp-1">Bride's Family</p>
+<p class="text-subtle-light dark:text-subtle-dark text-sm font-normal leading-normal line-clamp-2">32 Guests</p>
+</div>
+</div>
+<button class="shrink-0 text-subtle-light dark:text-subtle-dark">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+</button>
+</div>
+<!-- List Item 2 -->
+<div class="flex min-h-[72px] items-center gap-4 rounded-lg bg-surface-light dark:bg-surface-dark p-3">
+<div class="flex items-center gap-4 flex-1">
+<div class="text-primary flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-content-light dark:text-content-dark text-base font-medium leading-normal line-clamp-1">Groom's Friends</p>
+<p class="text-subtle-light dark:text-subtle-dark text-sm font-normal leading-normal line-clamp-2">54 Guests</p>
+</div>
+</div>
+<button class="shrink-0 text-subtle-light dark:text-subtle-dark">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+</button>
+</div>
+<!-- List Item 3 -->
+<div class="flex min-h-[72px] items-center gap-4 rounded-lg bg-surface-light dark:bg-surface-dark p-3">
+<div class="flex items-center gap-4 flex-1">
+<div class="text-primary flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-2xl">star</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-content-light dark:text-content-dark text-base font-medium leading-normal line-clamp-1">VIPs</p>
+<p class="text-subtle-light dark:text-subtle-dark text-sm font-normal leading-normal line-clamp-2">12 Guests</p>
+</div>
+</div>
+<button class="shrink-0 text-subtle-light dark:text-subtle-dark">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+</button>
+</div>
+<!-- List Item 4 -->
+<div class="flex min-h-[72px] items-center gap-4 rounded-lg bg-surface-light dark:bg-surface-dark p-3">
+<div class="flex items-center gap-4 flex-1">
+<div class="text-primary flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-2xl">diversity_1</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-content-light dark:text-content-dark text-base font-medium leading-normal line-clamp-1">College Friends</p>
+<p class="text-subtle-light dark:text-subtle-dark text-sm font-normal leading-normal line-clamp-2">28 Guests</p>
+</div>
+</div>
+<button class="shrink-0 text-subtle-light dark:text-subtle-dark">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Empty State Example (commented out for default view) -->
+<!--
+            <div class="flex flex-1 flex-col items-center justify-center text-center py-20">
+                <div class="text-primary flex size-20 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 mb-6">
+                    <span class="material-symbols-outlined text-4xl">segment</span>
+                </div>
+                <h2 class="text-xl font-bold text-content-light dark:text-content-dark">Organize Your Guests</h2>
+                <p class="mt-2 max-w-xs text-subtle-light dark:text-subtle-dark">Create segments like 'Family' or 'Friends' to easily manage your guest list. Tap 'Create New Segment' to start.</p>
+            </div>
+            -->
+</main>
+<!-- Floating Action Button -->
+<footer class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 px-4 py-4 backdrop-blur-sm">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-14 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="truncate">Create New Segment</span>
+</button>
+</footer>
+</div>
+</body></html>
