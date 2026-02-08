@@ -1,6 +1,8 @@
 // Wedding Invitation App Frontend JavaScript
 
-const API_BASE_URL = 'https://5001-a59fe3b6-6af2-4b6d-8590-cb49fb6e55b8.sandbox-service.public.prod.myninja.ai/api';
+const API_BASE_URL = window.location.origin.includes('localhost') || window.location.origin.includes('127.0.0.1')
+    ? 'http://localhost:5000/api'
+    : window.location.origin.replace('3000', '5000') + '/api';
 let currentUser = null;
 let currentEvent = null;
 

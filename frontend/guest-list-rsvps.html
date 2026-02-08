@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guest List &amp; RSVPs</title>
+<!-- Google Fonts: Noto Serif -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#cf1773",
+              "background-light": "#f8f6f7",
+              "background-dark": "#211119",
+            },
+            fontFamily: {
+              "display": ["Noto Serif", "serif"],
+              "sans": ["Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .serif-text {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#181114] dark:text-[#f8f6f7]">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden max-w-md mx-auto border-x border-gray-200 dark:border-gray-800 shadow-xl">
+<!-- Header Section -->
+<div class="flex flex-col gap-2 bg-white dark:bg-[#2d1822] p-4 pb-4 sticky top-0 z-20 shadow-sm">
+<div class="flex items-center h-12 justify-between">
+<div class="text-[#181114] dark:text-white flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-12 bg-transparent text-[#181114] dark:text-white">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<h1 class="text-[#181114] dark:text-white tracking-tight text-[32px] font-bold leading-tight serif-text">Guest List</h1>
+</div>
+<!-- Summary Cards Grid -->
+<div class="grid grid-cols-2 gap-3 p-4">
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white dark:bg-[#2d1822] border border-[#e5dce0] dark:border-[#3d2a34] shadow-sm">
+<p class="text-[#886375] dark:text-[#c4a9b7] text-xs font-semibold uppercase tracking-wider">Total</p>
+<p class="text-primary tracking-tight text-3xl font-bold leading-tight serif-text">150</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white dark:bg-[#2d1822] border border-[#e5dce0] dark:border-[#3d2a34] shadow-sm">
+<p class="text-[#886375] dark:text-[#c4a9b7] text-xs font-semibold uppercase tracking-wider">Confirmed</p>
+<p class="text-primary tracking-tight text-3xl font-bold leading-tight serif-text">92</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white dark:bg-[#2d1822] border border-[#e5dce0] dark:border-[#3d2a34] shadow-sm">
+<p class="text-[#886375] dark:text-[#c4a9b7] text-xs font-semibold uppercase tracking-wider">Declined</p>
+<p class="text-[#181114] dark:text-white tracking-tight text-3xl font-bold leading-tight serif-text">12</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white dark:bg-[#2d1822] border border-[#e5dce0] dark:border-[#3d2a34] shadow-sm">
+<p class="text-[#886375] dark:text-[#c4a9b7] text-xs font-semibold uppercase tracking-wider">Pending</p>
+<p class="text-[#181114] dark:text-white tracking-tight text-3xl font-bold leading-tight serif-text">46</p>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-2">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-inner">
+<div class="text-[#886375] dark:text-[#c4a9b7] flex border-none bg-white dark:bg-[#2d1822] items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-[#181114] dark:text-white focus:outline-0 focus:ring-0 border-none bg-white dark:bg-[#2d1822] h-full placeholder:text-[#886375] px-4 pl-2 text-base font-normal leading-normal" placeholder="Search guests by name..."/>
+</div>
+</label>
+</div>
+<!-- Guest List Title -->
+<div class="px-4 pt-6 pb-2">
+<h2 class="text-[#886375] dark:text-[#c4a9b7] text-sm font-bold uppercase tracking-widest serif-text">All Guests</h2>
+</div>
+<!-- Guest List Container -->
+<div class="flex flex-col gap-px bg-[#e5dce0] dark:bg-[#3d2a34]">
+<!-- Guest Row 1 -->
+<div class="flex gap-4 bg-white dark:bg-[#211119] px-4 py-4 justify-between items-center transition-colors active:bg-gray-50 dark:active:bg-[#2d1822]">
+<div class="flex items-start gap-4 flex-1">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 border border-primary/20" data-alt="Portrait of a smiling couple" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDu1IUl1LRNQiEELXge6To5scCN9wBovet9lz2y-qLM-O4AB-Uf18zat-law_YHG-_j_9F_7vkO7pNR2KsqbhG04HsvWsZEvHmmCrLr-Ootq0JSWRg0PZSP6nRfm81vPKDO1Aj-fN1FKvqyz2PU1848sw9Eyfh0IXjiXA77hXsB6VW1Bjj1we-GLfbO6aAb3ZBMFdpZrkDkpHIkpge9txKNfK3fcfGh4wVTBisrM8bD5Oq49xREaz3oTmnEvFHfObbTnEKxDye9PiQ");'></div>
+<div class="flex flex-1 flex-col">
+<div class="flex items-center gap-2">
+<p class="text-[#181114] dark:text-white text-base font-bold leading-tight serif-text">Mr. &amp; Mrs. Julian Smith</p>
+<span class="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Attending</span>
+</div>
+<p class="text-[#886375] dark:text-[#c4a9b7] text-sm font-normal leading-normal mt-0.5">Salmon • Vegan</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary">mail</span>
+<p class="text-primary text-xs font-medium">Invite Sent</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<label class="relative flex h-[28px] w-[48px] cursor-pointer items-center rounded-full border-none bg-[#f4f0f2] dark:bg-[#3d2a34] p-0.5 transition-all has-[:checked]:bg-primary">
+<div class="h-full w-[24px] rounded-full bg-white shadow-md transform transition-transform duration-200 has-[:checked]:translate-x-[20px]"></div>
+<input checked="" class="invisible absolute peer" type="checkbox"/>
+</label>
+<span class="material-symbols-outlined text-[#886375] dark:text-[#c4a9b7] text-[20px]">more_vert</span>
+</div>
+</div>
+<!-- Guest Row 2 -->
+<div class="flex gap-4 bg-white dark:bg-[#211119] px-4 py-4 justify-between items-center transition-colors">
+<div class="flex items-start gap-4 flex-1">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 border border-primary/20" data-alt="Portrait of a young woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjeAiO-BAr-YtLPPK5C_sV3UYZWgtau2N_xTgJTZeMSCWwzLM2O78DR4lpI4h8oZgc5q2HLKLvYRzLM792Ew-7DLw60uNCpue3a9JsIoBOZQ6_w5p4O7XhzkiS1FnLn4bub6PO9LH-hWmJZClG_fLe2txpndEYA99P1jVh4uvLaaHrWba5ciPpv_b0RO7lFErncq2cZSnIjNzTd3gGaV0SQVprhNoNlwP5HRgQnJkiHEM1LiPAIiQ9aNGt2xssBd_cqKurMpJFvKE");'></div>
+<div class="flex flex-1 flex-col">
+<div class="flex items-center gap-2">
+<p class="text-[#181114] dark:text-white text-base font-bold leading-tight serif-text">Alice Johnson</p>
+<span class="bg-gray-100 dark:bg-[#3d2a34] text-[#886375] dark:text-[#c4a9b7] text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Pending</span>
+</div>
+<p class="text-[#886375] dark:text-[#c4a9b7] text-sm font-normal leading-normal mt-0.5">TBD (Meal Choice)</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-gray-400">mail</span>
+<p class="text-gray-400 text-xs font-medium">Invite Sent</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<label class="relative flex h-[28px] w-[48px] cursor-pointer items-center rounded-full border-none bg-[#f4f0f2] dark:bg-[#3d2a34] p-0.5 transition-all has-[:checked]:bg-primary">
+<div class="h-full w-[24px] rounded-full bg-white shadow-md"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+<span class="material-symbols-outlined text-[#886375] dark:text-[#c4a9b7] text-[20px]">more_vert</span>
+</div>
+</div>
+<!-- Guest Row 3 -->
+<div class="flex gap-4 bg-white dark:bg-[#211119] px-4 py-4 justify-between items-center">
+<div class="flex items-start gap-4 flex-1">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 border border-primary/20" data-alt="Portrait of a man in a suit" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlCrMzDIEQHql11dIjoH88sIah_iMGJQFOQw5cvDnpfXozzUQll44EfXSk-94B0oo8yWqqg-rT4LP2XEqMsV06QB8o5IrWdg9F_Ig_s9O0CLW1gR0aYMmbAoMyvknOLUnT65IK2iSG1ksis5nPF9TgXkmziSBennqeDUBb7ZcaoqctFwvfS5Dk6TUbjgYfTvG795eA59b99LdfWhW4f5ER1ccoygfcsLCf1ozP4YtmSpHC00nJHzKsDsw4EB8gE-KFGG6hka1rKvI");'></div>
+<div class="flex flex-1 flex-col">
+<div class="flex items-center gap-2">
+<p class="text-[#181114] dark:text-white text-base font-bold leading-tight serif-text">David Miller</p>
+<span class="bg-red-50 dark:bg-[#3d2a34] text-red-500 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Declined</span>
+</div>
+<p class="text-[#886375] dark:text-[#c4a9b7] text-sm font-normal leading-normal mt-0.5">No Meal Preference</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary">mail</span>
+<p class="text-primary text-xs font-medium">Invite Sent</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<label class="relative flex h-[28px] w-[48px] cursor-pointer items-center rounded-full border-none bg-[#f4f0f2] dark:bg-[#3d2a34] p-0.5 transition-all has-[:checked]:bg-primary">
+<div class="h-full w-[24px] rounded-full bg-white shadow-md"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+<span class="material-symbols-outlined text-[#886375] dark:text-[#c4a9b7] text-[20px]">more_vert</span>
+</div>
+</div>
+<!-- Guest Row 4 -->
+<div class="flex gap-4 bg-white dark:bg-[#211119] px-4 py-4 justify-between items-center">
+<div class="flex items-start gap-4 flex-1">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 border border-primary/20" data-alt="Portrait of a woman with red hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6jR6Bu7O3DA8CZ_g2zO8YVNuPu44C9rSvtSMLif6QRRAvXRyFGpt3OMEEJXUbBmr3z0uDpi8sOdtoJ8ggZJJ89ANaIxes7VNqbyNU4N8mflc7oRQqUdEyI6YDiEcr_Z9nprBSMUG9CfuMTWfuHpfQgrqxJVY7_yueLyV1ls5HO1zH6f8BWZ9mFIbjVGr2wTC_vDPn0Fvb7Dvev0nGmhroMkTt4ZBjqq-qhYyMtg1Dt_X4tkwkJvXFuMIZIRgwB32SZPwq2gD6XcA");'></div>
+<div class="flex flex-1 flex-col">
+<div class="flex items-center gap-2">
+<p class="text-[#181114] dark:text-white text-base font-bold leading-tight serif-text">Emily Watson &amp; Guest</p>
+<span class="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Attending</span>
+</div>
+<p class="text-[#886375] dark:text-[#c4a9b7] text-sm font-normal leading-normal mt-0.5">Beef • Chicken</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary">mail</span>
+<p class="text-primary text-xs font-medium">Invite Sent</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<label class="relative flex h-[28px] w-[48px] cursor-pointer items-center rounded-full border-none bg-[#f4f0f2] dark:bg-[#3d2a34] p-0.5 transition-all has-[:checked]:bg-primary">
+<div class="h-full w-[24px] rounded-full bg-white shadow-md"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+<span class="material-symbols-outlined text-[#886375] dark:text-[#c4a9b7] text-[20px]">more_vert</span>
+</div>
+</div>
+</div>
+<!-- Spacer for FAB -->
+<div class="h-24 bg-background-light dark:bg-background-dark"></div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-xl hover:scale-105 transition-transform z-30 ring-4 ring-white dark:ring-[#211119]">
+<span class="material-symbols-outlined" style="font-size: 32px;">person_add</span>
+</button>
+<!-- Bottom Tab Bar Mockup (Optional UI context) -->
+<div class="fixed bottom-0 left-0 right-0 h-16 bg-white dark:bg-[#2d1822] border-t border-gray-100 dark:border-gray-800 flex items-center justify-around px-4 z-20 max-w-md mx-auto">
+<div class="flex flex-col items-center gap-0.5">
+<span class="material-symbols-outlined text-gray-400">home</span>
+<span class="text-[10px] font-medium text-gray-400">Home</span>
+</div>
+<div class="flex flex-col items-center gap-0.5">
+<span class="material-symbols-outlined text-primary">group</span>
+<span class="text-[10px] font-medium text-primary">Guests</span>
+</div>
+<div class="flex flex-col items-center gap-0.5">
+<span class="material-symbols-outlined text-gray-400">event</span>
+<span class="text-[10px] font-medium text-gray-400">Events</span>
+</div>
+<div class="flex flex-col items-center gap-0.5">
+<span class="material-symbols-outlined text-gray-400">settings</span>
+<span class="text-[10px] font-medium text-gray-400">Tools</span>
+</div>
+</div>
+</div>
+</body></html>

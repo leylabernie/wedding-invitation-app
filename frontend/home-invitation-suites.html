@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home - Invitation Suites</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b6c",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221016",
+              },
+              fontFamily: {
+                "display": ["Noto Serif", "serif"],
+                "sans": ["Noto Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-chip {
+            background-color: #ee2b6c;
+            color: white;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden pb-20">
+<!-- Top Navigation -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-display font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Invitation Suites</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-12 w-12 bg-transparent text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+</button>
+</div>
+</div>
+<!-- Search Section -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-slate-400 flex border-none bg-white dark:bg-slate-800 items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-white dark:bg-slate-800 focus:border-none h-full placeholder:text-slate-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search for suites, cards, or themes" value=""/>
+</div>
+</label>
+</div>
+<!-- Category Horizontal List -->
+<div class="flex gap-3 px-4 py-3 overflow-x-auto hide-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full active-chip px-6 shadow-sm">
+<p class="text-sm font-medium leading-normal">Floral</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-6 shadow-sm">
+<p class="text-slate-900 dark:text-slate-200 text-sm font-medium leading-normal">Minimalist</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-6 shadow-sm">
+<p class="text-slate-900 dark:text-slate-200 text-sm font-medium leading-normal">Boho</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-6 shadow-sm">
+<p class="text-slate-900 dark:text-slate-200 text-sm font-medium leading-normal">Modern</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-6 shadow-sm">
+<p class="text-slate-900 dark:text-slate-200 text-sm font-medium leading-normal">Vintage</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-6 shadow-sm">
+<p class="text-slate-900 dark:text-slate-200 text-sm font-medium leading-normal">Luxury</p>
+</div>
+</div>
+<!-- Trending Bundles Section -->
+<div class="flex flex-col">
+<div class="flex items-center justify-between px-4 pb-3 pt-5">
+<h2 class="text-slate-900 dark:text-white text-2xl font-display font-bold leading-tight tracking-tight">Trending Bundles</h2>
+<p class="text-primary text-sm font-semibold">View all</p>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar">
+<div class="flex items-stretch p-4 gap-4">
+<!-- Bundle 1 -->
+<div class="flex h-full flex-1 flex-col gap-3 rounded-xl min-w-[280px]">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover transform transition-transform duration-500 group-hover:scale-105" data-alt="Golden Eucalyptus wedding invitation suite with gold foil accents" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAj7xOCsxSSrNF2mTLYhqxBsxyQ9fiOt6fVN3xQmZAos4jTqPxFmw_y1KIFV4VRAWybmGXh4iJPrX8Vt7rg3QYvgw6yPVEJd0wixsuqiSV8Chi9i27Lzobrw703C68VTYGgfOTp1AQoCdxLNGUzD-tfXBUNgEUw8pNB2TCoF3SHFNBchfAhUdm-cDbHJlSuRrTun4KUuXInpYNAyTh0UIsZhQf3RY6JOgQG4l9DYCWK96ePny3_7XiAXTXL7uKeScXwoG7jWbVTAPE");'></div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 rounded-full p-2 shadow-md">
+<span class="material-symbols-outlined text-primary text-xl">favorite</span>
+</div>
+<div class="absolute bottom-3 left-3 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Trending</div>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-lg font-display font-bold leading-normal">Golden Eucalyptus</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">5-piece set • $120.00</p>
+</div>
+</div>
+<!-- Bundle 2 -->
+<div class="flex h-full flex-1 flex-col gap-3 rounded-xl min-w-[280px]">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover transform transition-transform duration-500 group-hover:scale-105" data-alt="Midnight Peony dark floral invitation cards collection" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuejQ4ZBZXLhXcIKFHLSF7uEY9eLlOVCoaSBZ7--hPHmeNR2vqI07JAytNrk2nIt_HfAKAE_rVBGxHzS2Qmyukt7ro5eHcSVOaeSyBzuug4apwdATl2OKuBwOVoqE_McT3GGg3Kwd1oyMe5AyV0kBUwjj2CpulgZYzTBc1mk9kBIWQ1cmvg_3mZZeDEUCVH0tavVXLsy8aPNR9Xp-eqenLINap2oW1D8quigucRH4zvKVqA8MMOoV_Kb0eqccCGLIrlcAWE4-Vx_Q");'></div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 rounded-full p-2 shadow-md">
+<span class="material-symbols-outlined text-slate-400 text-xl">favorite</span>
+</div>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-lg font-display font-bold leading-normal">Midnight Peony</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">4-piece set • $110.00</p>
+</div>
+</div>
+<!-- Bundle 3 -->
+<div class="flex h-full flex-1 flex-col gap-3 rounded-xl min-w-[280px]">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover transform transition-transform duration-500 group-hover:scale-105" data-alt="Desert Rose minimalist wedding stationery bundle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBORQP1KVyRP8U8fT3w8eg-u8qQRhqcZ2wIQ5RCGVOwj-69cyzRujwObndhp8lSuvOh7pNmqZfw2feeDWf4ic4ycqzD4b2IxHkc6k8pOtPPdoOxqY35Gb0Eeb8cS4CTcBH6YJgijfGGtTGCzbpkieZBRqP2r7gVBW8JKKZtdK4HRnDfssA_PtZ6cjGTaVsvWXgmVZ-ZWI4NEL_Wcd-LhCLa0Uz8kp5F2bPjlZmdZpCQPWjYRd2pHQ3qW8-naM7PKR_Rd7qmgf6lc1Y");'></div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 rounded-full p-2 shadow-md">
+<span class="material-symbols-outlined text-slate-400 text-xl">favorite</span>
+</div>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-lg font-display font-bold leading-normal">Desert Rose</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">6-piece set • $145.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Suite Feed (Grid style) -->
+<div class="flex flex-col px-4 mt-6">
+<h2 class="text-slate-900 dark:text-white text-2xl font-display font-bold leading-tight tracking-tight mb-4">New Arrivals</h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Suite Item 1 -->
+<div class="flex flex-col gap-2">
+<div class="relative aspect-square rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Elegant cream and gold script wedding invitation" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCg0LYtoQCIZFgsXs_M2R1HAmZHZaB_jep-ua3cHQwe7EwYbb1EH6WlZTDY_1WMkSjwjKNVKYp11mVcgi59jNQFfmVlPviv30Nwty5Dx3UR8PW6mqxQJ-YLhsVw9b2AjFv6KiR8pTjjY9N1KO7-2p_rIhOryOaqgZ4qTiRFVYybi56ObliGAES2-xfTWMhORav_GqczHaIIy-PjxXYfCL_4pgpI9AWSadflankmoqWEJTvp296jo4CXspeiG7gJ7R1ayIL6KhZGjsQ');"></div>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-slate-900/80 rounded-full">
+<span class="material-symbols-outlined text-slate-900 dark:text-white text-base">favorite</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-display font-bold text-slate-900 dark:text-white">Velvet Azure</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">3 pieces • $85.00</p>
+</div>
+</div>
+<!-- Suite Item 2 -->
+<div class="flex flex-col gap-2">
+<div class="relative aspect-square rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Rustic boho wedding card with botanical drawings" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByNYRxlgscOgWO9fmKc1ez6lDtNtTsW4gaymuXAO-17cxjJJJMKIiZ60hvlKh2aLy22gBsxIjP2TPLxCVCqh9sLz3qqWMWexjtEPPmHQ0yNqDhcDVN2IuoWFGnT7-K9i1P3OpgR4aOX6FW0kW60ttmRS2WNBQzWKxKVxLwzmojjrkCFXtA9NTxZ1GnZLA-LjBBguoPPmUa2QSRdQbfVvM3HbehhDz8b8qBPcJw7cvTZpr_IWhJobzsV66WSNyni0Yt8UuQ_QJUQdA');"></div>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-slate-900/80 rounded-full">
+<span class="material-symbols-outlined text-slate-900 dark:text-white text-base">favorite</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-display font-bold text-slate-900 dark:text-white">Botanical Bliss</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">4 pieces • $95.00</p>
+</div>
+</div>
+<!-- Suite Item 3 -->
+<div class="flex flex-col gap-2">
+<div class="relative aspect-square rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Modern geometric wedding invitation with copper foil" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC09VQ4jzuI05B8PiVkeYRp6LnqyCrFqFgk-yaWsWTMMRAB3_Q68uqyUClqfpMIz4xx2PXqcmbWBQir_RO81aA75Niq3u3kClS2P3zGVdIddn1jW84BA-wrFN8TSEhJGcpfXgfLsph8neyBqvlLAEzNFpdckNFsshDr169Gp74sREQyZg277giTIKUIpx3gHHgLKavXo335LTn-TeEoPfNtRZZaBKlDb1QTDekjKtWRhy53hyZnOsdpn8pTi4oKNI5IYSf15wJbMN8');"></div>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-slate-900/80 rounded-full">
+<span class="material-symbols-outlined text-slate-900 dark:text-white text-base">favorite</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-display font-bold text-slate-900 dark:text-white">Copper Frame</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">5 pieces • $130.00</p>
+</div>
+</div>
+<!-- Suite Item 4 -->
+<div class="flex flex-col gap-2">
+<div class="relative aspect-square rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Classic formal calligraphy wedding invitation" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB51gmZcpR0r3kVdYEmdsMuuyzE8hKBdwQrEVbZnw13qcC8Gc8xMXaxeyX_15CYZAxs67sHSL5AW43g_l2nSQO-IJCVAPxvXlLitrhh-tXlO4xc8ACvyeKkuFbz5uFrBJJr6cmlfOv4jhMmRZfs0jiP2qZ4LdlqRTLb7GERNSLzbzp4sdLaOH2WU_ob33yfWqibGj1zI5Oa8ErEhXXJvU7_WJUxzzUF4RcWAyQxVfwHD-65DGL4Fu1ZbhmBVLVHPbAY-dy6EuVp_Cs');"></div>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-slate-900/80 rounded-full">
+<span class="material-symbols-outlined text-slate-900 dark:text-white text-base">favorite</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-display font-bold text-slate-900 dark:text-white">Timeless Script</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">4 pieces • $105.00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 h-20 pb-4 flex items-center justify-around z-20">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-medium text-primary">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-slate-400">favorite</span>
+<span class="text-[10px] font-medium text-slate-400">Saved</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="bg-primary rounded-full p-2 -mt-10 shadow-lg shadow-primary/40 flex items-center justify-center border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-white text-3xl">add</span>
+</div>
+<span class="text-[10px] font-medium text-slate-400 mt-1">Create</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-slate-400">auto_stories</span>
+<span class="text-[10px] font-medium text-slate-400">Drafts</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-slate-400">settings</span>
+<span class="text-[10px] font-medium text-slate-400">Settings</span>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b6c",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221016",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#181113] dark:text-white antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / TopAppBar -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-3 justify-between">
+<div class="flex size-10 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">Suite Details</h2>
+<div class="flex size-10 items-center justify-end">
+<span class="material-symbols-outlined text-2xl cursor-pointer">share</span>
+</div>
+</header>
+<main class="flex-1 pb-32">
+<!-- Hero Preview -->
+<div class="px-4 py-4">
+<div class="group relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-white shadow-xl">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Elegant vertical wedding invitation with floral gold accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRCt1Pv_wHURmuRvGisBQpSmLspsWnf7Xv5bIz-n4BlNI8krYHKdtgxmLuhOcr2BqRQqiiJLJtlR7BjIPip3HQlWZJy8a0e5OqgJ7QvrlKXsdWcdNVKsimA7rZh0Zr94cP9SyLmnlzJMj0E2c76BhxZwq0Bu4nmR7GJ4ijl7SwH2rW32hu6RxxvgRlNWKHQrXoj_YaICedF4RsfwQlkZfjXsQkJ2SkYSGR7t2KaEjdcziP-a8C08g2m2YFpnsTZOtsEk4G_GnkSbg')">
+</div>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full shadow-sm">
+<span class="text-xs font-semibold text-primary uppercase tracking-widest">Main Invite</span>
+</div>
+</div>
+</div>
+<!-- Suite Title & Intro -->
+<div class="px-6 text-center">
+<h1 class="text-3xl font-bold leading-tight font-display mb-2">The Midnight Bloom Suite</h1>
+<p class="text-sm opacity-80 leading-relaxed max-w-sm mx-auto">
+                    Minimalist typography paired with hand-drawn floral elements for a sophisticated garden wedding experience.
+                </p>
+</div>
+<!-- Bundle Checklist Section -->
+<div class="mt-10 px-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold font-display">Bundle Checklist</h3>
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">5 ITEMS</span>
+</div>
+<!-- Checklist Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Item 1: RSVP -->
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full rounded-lg bg-white shadow-sm border border-black/5 overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-cover rounded" data-alt="Small RSVP card matching the main invitation design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-IEwfEzP4zmTPvvuuB9q0jPGygy40nFKOBtK_Cq2cO7qo0R5ZVj2OIKwtQogKctQLPWbIGN3sp7NATWBIRl3WPvA1nLEY5260sxw16-y78xOd0zVztY9_P9EcTtqmdjC76aA83ybykA6AiBC2I9VbXX7DK7ofLAgWeM9HTyGl_Hkg66MJQL0ld4huQ92pSGJAy9fKQXHrErMRSgaCgTJUYt7LBx9FVaK-C88JXqKgZHJ6g2jli_Or6ys73k_Feiotc-ETRIdnVkk"/>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="text-sm font-medium">RSVP Card</span>
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+</div>
+</div>
+<!-- Item 2: Menu -->
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full rounded-lg bg-white shadow-sm border border-black/5 overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-cover rounded" data-alt="Tall narrow wedding menu card with gold foil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5ECrdUzwOWoo32wXMjic3zHkvlYrKbhFtC25dHlfY5uQzZrGgnPgvpscaAY9qiZNQIu4MxufkTPLAcbMxFz8M-MIqHmVOK5kh3OnqnQhCAEoXuJBPUjIVTsN2j56aBito6B8TmuXkQwxg5xYnaCLNVjiBuLWnvvVVVUI7w6VXHH-q2E7f_2EZNJvpTEp_v6TarORhdSlJIpaaJJKHHQGQ5YmCuKW2HQfX9IyYH31tQctfNTQuQkeoXwQVDOd9JgSLuhPQf77DEss"/>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="text-sm font-medium">Menu</span>
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+</div>
+</div>
+<!-- Item 3: Welcome Sign -->
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full rounded-lg bg-white shadow-sm border border-black/5 overflow-hidden flex items-center justify-center p-2">
+<div class="w-full h-full bg-slate-50 flex items-center justify-center relative overflow-hidden rounded">
+<img class="w-full h-full object-cover" data-alt="Large welcome sign displayed on a wooden easel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD50nCSWn00m1eEAlGkhUUr5Xvm01wXqxXhPzIWTFLuaOmYxRmaMYcm9bjrRzZKZIdFQr20odyxSKhjl2t_9NFZoacK9yT1SpghhMQmkwpyQqg8MGk_aCwl_stjkbHXm2iYTGYS09hUnN8Su2UlCADrHwvgQG-uXL5Oe8MaES8TEjnJS-3g5htAlmuNpLY5dVsYR4ATjWH94XpjWwcfKzuh9Go1FBlCE0TieGKGV33xu33mWkYZM4TcfSAEvkB9S3nQsdKiiYMvwys"/>
+</div>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="text-sm font-medium">Welcome Sign</span>
+<span class="material-symbols-outlined text-gray-300 text-sm">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Item 4: Table Numbers -->
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full rounded-lg bg-white shadow-sm border border-black/5 overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-cover rounded" data-alt="Small table number card standing in a brass holder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE-ahar0dWz-mjA8anrr076O9GBzyNK9uIWkgdKnSB36POG3ZTFos5lzykqbSlK3-MEhnGJ4y3aRrMkKU3ARXg7H-hSB_pF1ayjuar2vt3imwi2MXPtetzfEFDd-NrNYhZ0axxrHRtVanZvkMQUE1RjaSscO3vKF-t-OZeW2cW9Gn0kCgbkD-tddGrlqS5bN4blR0kMraCWsxVt7VsVOtZ2M9NLvPQb1eQB-aZ4Iz0lAwQMYGtAec1TPh0HZToU4wX-zAEAKhy5lM"/>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="text-sm font-medium">Table Numbers</span>
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+</div>
+</div>
+<!-- Item 5: Thank You -->
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full rounded-lg bg-white shadow-sm border border-black/5 overflow-hidden flex items-center justify-center p-2">
+<div class="w-full h-full bg-primary/5 flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-4xl text-primary/40">add_circle</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="text-sm font-medium text-primary">Add More Items</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Optional Add-ons Info -->
+<div class="mt-8 px-6 pb-10">
+<div class="bg-white dark:bg-background-dark/50 p-4 rounded-xl border border-black/5 shadow-sm">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">info</span>
+<div>
+<p class="text-sm font-bold">Bundle Savings</p>
+<p class="text-xs opacity-70 leading-relaxed mt-1">Get 15% off when you purchase 3 or more items from this collection.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-black/5 px-6 pt-4 pb-8 z-50">
+<div class="flex items-center justify-between mb-4">
+<div>
+<p class="text-[10px] uppercase tracking-widest font-bold opacity-50">Estimated Total</p>
+<p class="text-xl font-bold">$124.00</p>
+</div>
+<div class="flex -space-x-2">
+<div class="size-8 rounded-full border-2 border-white dark:border-background-dark overflow-hidden">
+<img data-alt="Avatar of designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ0gI2kFTMFMgpmjIwJBklrRQukpEMdqjI2a79y76B0Tq5JNOpG4r7EvWGHsrG1rtEZ86BOZMucc3RtTVbeALIY2U5cNSqOsG-s5b4NNPwdJ2sRsTGf5ag9RsDRQ6jaKNuForV7gfzKNd1PJQr8Rd3GbxxRowavAvtMSfPDx7fXL9iGvGeAU-SuiiT_Ucq87YNmFD_hQPbq1N8S9HsalEGk-92RpkQNZtnSkJtzkp1Yt1IwQK_GXa6ye-zwqMSYJ6Nqh0texHn67w"/>
+</div>
+<div class="size-8 rounded-full border-2 border-white dark:border-background-dark bg-primary flex items-center justify-center text-[10px] text-white font-bold">+2</div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold text-base shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+                Customize Bundle
+            </button>
+</div>
+</div>
+</body></html>

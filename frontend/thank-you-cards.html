@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thank You Cards</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b6c",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221016",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181113] dark:text-[#f8f6f6] min-h-screen">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50">
+<div class="text-[#181113] dark:text-[#f8f6f6] flex size-12 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-[#181113] dark:text-[#f8f6f6] text-lg font-bold leading-tight tracking-tight flex-1 text-center">Thank You Cards</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-12 bg-transparent text-primary p-0">
+<span class="material-symbols-outlined">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Sync Header -->
+<div class="flex flex-col items-center px-4 py-2">
+<div class="flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-sm">sync</span>
+<p class="text-primary text-[12px] font-bold uppercase tracking-wider">Synced with Floral Boho Suite</p>
+</div>
+</div>
+<!-- Toggle Component -->
+<div class="flex px-6 py-4">
+<div class="flex h-12 flex-1 items-center justify-center rounded-full bg-[#eee6e8] dark:bg-[#361d25] p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-4 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-[#181113] dark:has-[:checked]:text-[#f8f6f6] text-[#89616f] text-sm font-semibold transition-all">
+<span class="truncate">Photo Cards</span>
+<input checked="" class="invisible w-0" name="card-type" type="radio" value="photo"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-4 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-[#181113] dark:has-[:checked]:text-[#f8f6f6] text-[#89616f] text-sm font-semibold transition-all">
+<span class="truncate">Classic Text</span>
+<input class="invisible w-0" name="card-type" type="radio" value="text"/>
+</label>
+</div>
+</div>
+<!-- Horizontal Scroll Templates -->
+<div class="flex overflow-x-auto snap-x snap-mandatory [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-6 gap-6">
+<!-- Card Template 1 -->
+<div class="flex h-full flex-col gap-4 snap-center min-w-[280px]">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl shadow-lg border-4 border-white dark:border-white/10 relative overflow-hidden group" data-alt="Boho wedding couple with floral overlay thank you card" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1hZlOoEFYira7Di317FfcgyztRLOenvXIpA9hKV0KWUU0TpD_ppgPrxNftDxrNUfDN-FVtzv8XBmhqPrRNfi9ApZ2SE9-gXrwUzNQ8BZlXWZVklUO8JTHsY4gf8X_U7sNfqnrmMVk_n-XqIsT-NVdyTPvyKmqg9PNLPw7kN3uqUWyMHkyXSSEh6SM8Hug0Z1h8lqFFkXMQ1uAfsk3dkV10GkM04WoxQE4toxMvhSQoxIf4OG4nrlgHRyv4j59HcEl6Lcf5ndyRnQ");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-0 right-0 text-center">
+<span class="font-serif text-white text-3xl italic">Thank You</span>
+</div>
+</div>
+<div class="px-2">
+<p class="text-[#181113] dark:text-[#f8f6f6] text-base font-bold">Midnight Rose</p>
+<p class="text-[#89616f] text-sm font-medium">Portrait Layout</p>
+</div>
+</div>
+<!-- Card Template 2 -->
+<div class="flex h-full flex-col gap-4 snap-center min-w-[280px]">
+<div class="w-full bg-[#fdfaf5] bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl shadow-lg border-4 border-white dark:border-white/10 flex flex-col items-center justify-center relative" data-alt="Elegant floral border with classic calligraphy text">
+<!-- Floral Decor Elements simulated with icons -->
+<span class="material-symbols-outlined text-primary/30 absolute top-4 left-4 text-5xl rotate-45">filter_vintage</span>
+<span class="material-symbols-outlined text-primary/30 absolute bottom-4 right-4 text-5xl -rotate-12">spa</span>
+<div class="text-center p-8">
+<h3 class="font-serif italic text-4xl text-[#361d25] mb-2">Gratitude</h3>
+<div class="w-8 h-[1px] bg-primary mx-auto mb-4"></div>
+<p class="text-[#89616f] font-medium text-xs uppercase tracking-widest">James &amp; Sarah</p>
+</div>
+</div>
+<div class="px-2">
+<p class="text-[#181113] dark:text-[#f8f6f6] text-base font-bold">Wildflower Script</p>
+<p class="text-[#89616f] text-sm font-medium">Text Only</p>
+</div>
+</div>
+<!-- Card Template 3 -->
+<div class="flex h-full flex-col gap-4 snap-center min-w-[280px]">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl shadow-lg border-4 border-white dark:border-white/10 relative overflow-hidden" data-alt="Modern minimalist photo thank you card with small caption" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzHJIkMdwD5PhiJM0nTS3d72LF6nScTwfZwONq5SADOr0PMBgukww9dwLi7f1nwTATgtnqOy2u_zDSI59NkWSyPHFbc5BoFo0ZTjpVcA_S31hVxugKxZaP9AquiqRKjBEVKnUpm2q5tDgD3H3Z4_1IpJJ8tzuv5FuI2AyWPYKNdw73xYN5qq2OXx5YuOlrC6QVgAjU2bXWvzR5vue4acgSb4lkaYoKq_Zvgamyy6Xxkjc2noYk1MQdu-5VwdnmHZUON1YY4i9RCqU");'>
+<div class="absolute top-4 left-4 right-4 h-1/2 border border-white/40 rounded-lg"></div>
+</div>
+<div class="px-2">
+<p class="text-[#181113] dark:text-[#f8f6f6] text-base font-bold">Modern Muse</p>
+<p class="text-[#89616f] text-sm font-medium">Framed Photo</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Note Suggestions Button -->
+<div class="flex px-6 py-6 justify-center">
+<button class="flex w-full max-w-[320px] cursor-pointer items-center justify-center rounded-full h-14 bg-white dark:bg-[#361d25] text-primary border-2 border-primary/20 shadow-sm gap-3 px-6 transition-transform active:scale-95">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="text-sm font-bold tracking-tight">Note Suggestions</span>
+</button>
+</div>
+<!-- Editing Quick Bar -->
+<div class="mt-auto px-6 pb-8">
+<div class="bg-[#181113] dark:bg-primary rounded-xl p-4 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-white/60 text-[10px] font-bold uppercase tracking-widest">Current Style</span>
+<span class="text-white text-sm font-bold">Boho Chic • Ruby Red</span>
+</div>
+<div class="flex gap-2">
+<button class="size-10 rounded-full bg-white/10 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">palette</span>
+</button>
+<button class="size-10 rounded-full bg-white/10 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">format_size</span>
+</button>
+<button class="bg-white text-[#181113] px-4 rounded-full text-xs font-bold h-10">
+                        Edit Card
+                    </button>
+</div>
+</div>
+</div>
+<!-- Navigation Tabs Simulation (iOS Style) -->
+<div class="bg-white/80 dark:bg-[#181113]/80 backdrop-blur-md border-t border-gray-200 dark:border-white/5 pb-8 pt-2 px-8 flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 text-[#89616f]">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Suites</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">style</span>
+<span class="text-[10px] font-medium">Design</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#89616f]">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-[10px] font-medium">Bundle</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#89616f]">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Menu</span>
+</div>
+</div>
+</div>
+</body></html>

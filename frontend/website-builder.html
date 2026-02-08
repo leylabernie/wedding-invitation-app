@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wedding Website Builder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b6c",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221016",
+              },
+              fontFamily: {
+                "display": ["Noto Serif", "serif"],
+                "sans": ["Noto Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-chip {
+            background-color: #ee2b6c;
+            color: white;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden pb-32">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800/50">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-display font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Wedding Website</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-12 w-12 bg-transparent text-primary">
+<span class="material-symbols-outlined text-2xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="px-4 py-6">
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-start justify-between gap-4">
+<div class="flex-1">
+<h3 class="text-lg font-display font-bold text-slate-900 dark:text-white mb-1">Golden Eucalyptus Theme</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">Your website is currently using fonts and colors from your invitation suite.</p>
+<button class="flex items-center gap-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 px-4 py-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary text-lg">sync</span>
+<span class="text-sm font-semibold text-slate-900 dark:text-white">Sync with Suite</span>
+</button>
+</div>
+<div class="w-20 h-20 rounded-xl bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0 shadow-inner">
+<div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAj7xOCsxSSrNF2mTLYhqxBsxyQ9fiOt6fVN3xQmZAos4jTqPxFmw_y1KIFV4VRAWybmGXh4iJPrX8Vt7rg3QYvgw6yPVEJd0wixsuqiSV8Chi9i27Lzobrw703C68VTYGgfOTp1AQoCdxLNGUzD-tfXBUNgEUw8pNB2TCoF3SHFNBchfAhUdm-cDbHJlSuRrTun4KUuXInpYNAyTh0UIsZhQf3RY6JOgQG4l9DYCWK96ePny3_7XiAXTXL7uKeScXwoG7jWbVTAPE");'></div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-white text-xl font-display font-bold">Content Blocks</h3>
+<button class="text-primary text-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">add</span>
+                    Add Block
+                </button>
+</div>
+<div class="flex flex-col gap-3">
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-4 transition-transform active:scale-[0.99]">
+<div class="w-12 h-12 rounded-lg bg-pink-50 dark:bg-pink-900/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-slate-900 dark:text-white truncate">Our Story</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">How we met, the proposal...</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600">drag_handle</span>
+</div>
+</div>
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-4 transition-transform active:scale-[0.99]">
+<div class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center shrink-0 text-blue-500">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-slate-900 dark:text-white truncate">Schedule</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">Ceremony, Reception, After Party</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600">drag_handle</span>
+</div>
+</div>
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-4 transition-transform active:scale-[0.99]">
+<div class="w-12 h-12 rounded-lg bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center shrink-0 text-purple-500">
+<span class="material-symbols-outlined">card_giftcard</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-slate-900 dark:text-white truncate">Registry</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">Zola, Amazon, Crate &amp; Barrel</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600">drag_handle</span>
+</div>
+</div>
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-4 transition-transform active:scale-[0.99]">
+<div class="w-12 h-12 rounded-lg bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center shrink-0 text-orange-500">
+<span class="material-symbols-outlined">flight</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-slate-900 dark:text-white truncate">Travel Info</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">Hotel blocks, airports, shuttles</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600">drag_handle</span>
+</div>
+</div>
+<div class="group bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-4 transition-transform active:scale-[0.99] opacity-70">
+<div class="w-12 h-12 rounded-lg bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center shrink-0 text-teal-500">
+<span class="material-symbols-outlined">quiz</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-semibold text-slate-900 dark:text-white truncate">Q&amp;A</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">Common questions from guests</p>
+</div>
+<div class="flex items-center gap-1">
+<div class="px-2 py-0.5 rounded-full border border-slate-200 dark:border-slate-600 text-[10px] font-medium text-slate-400">Hidden</div>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600">drag_handle</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 mt-2 mb-6">
+<h3 class="text-slate-900 dark:text-white text-xl font-display font-bold mb-4">Design Settings</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+<p class="text-xs font-medium text-slate-400 mb-2 uppercase tracking-wider">Typography</p>
+<div class="space-y-1">
+<p class="font-display text-xl text-slate-900 dark:text-white">Aa</p>
+<p class="text-sm text-slate-600 dark:text-slate-300">Noto Serif</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+<p class="text-xs font-medium text-slate-400 mb-2 uppercase tracking-wider">Palette</p>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 bg-[#ee2b6c]"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 bg-[#f8f6f6]"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 bg-[#221016]"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 bg-[#eab308]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 fixed bottom-24 left-0 right-0 z-30 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full bg-primary hover:bg-pink-600 text-white font-bold text-lg h-14 rounded-xl shadow-lg shadow-primary/30 flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+<span>Publish Website</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 h-20 pb-4 flex items-center justify-around z-20">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-slate-400">home</span>
+<span class="text-[10px] font-medium text-slate-400">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">web</span>
+<span class="text-[10px] font-medium text-primary">Website</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="bg-primary rounded-full p-2 -mt-10 shadow-lg shadow-primary/40 flex items-center justify-center border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-white text-3xl">add</span>
+</div>
+<span class="text-[10px] font-medium text-slate-400 mt-1">Create</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-slate-400">group</span>
+<span class="text-[10px] font-medium text-slate-400">Guests</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-slate-400">settings</span>
+<span class="text-[10px] font-medium text-slate-400">Settings</span>
+</div>
+</div>
+</div>
+
+</body></html>

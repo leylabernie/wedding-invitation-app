@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Budget Tracker - Wedding Stationery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7de830",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#182111",
+                        "sage": "#728863",
+                        "gold": "#d4af37",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .circular-progress {
+            background: conic-gradient(#7de830 65%, #e0e5dc 0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#141811] dark:text-white antialiased min-h-screen">
+<div class="max-w-[480px] mx-auto min-h-screen bg-white dark:bg-[#1c2615] flex flex-col shadow-xl">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between p-4 sticky top-0 bg-white/80 dark:bg-[#1c2615]/80 backdrop-blur-md z-10">
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#141811] dark:text-white">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Stationery Budget</h1>
+<button class="size-10 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</header>
+<!-- Progress Chart Section -->
+<main class="flex-1 overflow-y-auto">
+<section class="flex flex-col items-center justify-center p-8 gap-6 border-b border-[#e0e5dc] dark:border-white/10">
+<div class="relative flex items-center justify-center size-56">
+<!-- Progress Ring -->
+<div class="absolute inset-0 rounded-full circular-progress rotate-[120deg]"></div>
+<!-- Inner Hole for Ring Look -->
+<div class="absolute inset-4 rounded-full bg-white dark:bg-[#1c2615] flex flex-col items-center justify-center">
+<span class="text-xs font-semibold uppercase tracking-widest text-sage opacity-70">Remaining</span>
+<span class="text-4xl font-extrabold">$450.00</span>
+<span class="text-xs font-medium text-sage/80 mt-1">35% of $1,300</span>
+</div>
+</div>
+<div class="flex w-full justify-around pt-2">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="size-2 rounded-full bg-primary"></span>
+<span class="text-xs text-sage font-medium uppercase tracking-tighter">Spent</span>
+</div>
+<p class="text-lg font-bold">$850.00</p>
+</div>
+<div class="w-[1px] bg-[#e0e5dc] dark:bg-white/10"></div>
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="size-2 rounded-full bg-[#e0e5dc]"></span>
+<span class="text-xs text-sage font-medium uppercase tracking-tighter">Budget</span>
+</div>
+<p class="text-lg font-bold">$1,300.00</p>
+</div>
+</div>
+</section>
+<!-- Categorized Breakdown -->
+<section class="p-4">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Categories</h2>
+<span class="text-sm font-medium text-sage">Manage</span>
+</div>
+<div class="space-y-3">
+<!-- Category: Printing & Paper -->
+<details class="group bg-background-light dark:bg-white/5 rounded-xl border border-transparent hover:border-gold/30 transition-all overflow-hidden" open="">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-gold/10 text-gold flex items-center justify-center">
+<span class="material-symbols-outlined">print</span>
+</div>
+<div>
+<p class="font-bold text-sm">Printing &amp; Paper</p>
+<p class="text-xs text-sage">3 items added</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-sm">$320.00</span>
+<span class="material-symbols-outlined text-sage group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+</summary>
+<div class="px-4 pb-4 space-y-3">
+<div class="flex justify-between items-center text-sm pt-2 border-t border-[#e0e5dc] dark:border-white/10">
+<span class="text-sage">Heavy Cardstock (x100)</span>
+<span class="font-medium">$150.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-sage">Gold Foil Embossing</span>
+<span class="font-medium">$100.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-sage">Linen Envelopes</span>
+<span class="font-medium">$70.00</span>
+</div>
+</div>
+</details>
+<!-- Category: Digital Tools -->
+<details class="group bg-background-light dark:bg-white/5 rounded-xl border border-transparent hover:border-gold/30 transition-all overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-primary/10 text-sage flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">devices</span>
+</div>
+<div>
+<p class="font-bold text-sm">Digital Tools</p>
+<p class="text-xs text-sage">Monthly subscription</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-sm">$45.00</span>
+<span class="material-symbols-outlined text-sage group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+</summary>
+<div class="px-4 pb-4 space-y-3">
+<div class="flex justify-between items-center text-sm pt-2 border-t border-[#e0e5dc] dark:border-white/10">
+<span class="text-sage">Design Software Pro</span>
+<span class="font-medium">$45.00</span>
+</div>
+</div>
+</details>
+<!-- Category: Postage -->
+<details class="group bg-background-light dark:bg-white/5 rounded-xl border border-transparent hover:border-gold/30 transition-all overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-[#e0e5dc] dark:bg-white/10 text-sage flex items-center justify-center">
+<span class="material-symbols-outlined">mark_as_unread</span>
+</div>
+<div>
+<p class="font-bold text-sm">Postage</p>
+<p class="text-xs text-sage">International delivery</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-sm">$120.00</span>
+<span class="material-symbols-outlined text-sage group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+</summary>
+<div class="px-4 pb-4 space-y-3">
+<div class="flex justify-between items-center text-sm pt-2 border-t border-[#e0e5dc] dark:border-white/10">
+<span class="text-sage">Domestic Stamps</span>
+<span class="font-medium">$80.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-sage">Custom Wax Seals</span>
+<span class="font-medium">$40.00</span>
+</div>
+</div>
+</details>
+<!-- Category: Design Fees -->
+<details class="group bg-background-light dark:bg-white/5 rounded-xl border border-transparent hover:border-gold/30 transition-all overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-gold/10 text-gold flex items-center justify-center">
+<span class="material-symbols-outlined">brush</span>
+</div>
+<div>
+<p class="font-bold text-sm">Design Fees</p>
+<p class="text-xs text-sage">Custom illustrations</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-sm">$200.00</span>
+<span class="material-symbols-outlined text-sage group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+</summary>
+<div class="px-4 pb-4 space-y-3">
+<div class="flex justify-between items-center text-sm pt-2 border-t border-[#e0e5dc] dark:border-white/10">
+<span class="text-sage">Calligraphy Artist</span>
+<span class="font-medium">$200.00</span>
+</div>
+</div>
+</details>
+</div>
+</section>
+<!-- Budget Tip Card -->
+<section class="p-4 pb-12">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 to-sage/5 p-5 border border-primary/20">
+<div class="flex items-start gap-4">
+<div class="size-10 rounded-full bg-white dark:bg-[#182111] flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold mb-1">Budget Saving Tip</p>
+<p class="text-sm text-sage leading-relaxed">
+                                Switching to <span class="text-[#141811] dark:text-white font-semibold">Digital RSVPs</span> saves approximately $150 in extra printing and return postage.
+                            </p>
+<button class="mt-4 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-widest bg-white dark:bg-white/5 px-4 py-2 rounded-full border border-primary/10 hover:bg-primary hover:text-white transition-all">
+                                Try Digital RSVPs
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Decorative Graphic -->
+<div class="absolute -right-4 -bottom-4 size-24 bg-primary/5 rounded-full blur-2xl"></div>
+</div>
+</section>
+</main>
+<!-- Bottom Tab Bar Placeholder (iOS Style) -->
+<nav class="h-20 bg-white dark:bg-[#1c2615] border-t border-[#e0e5dc] dark:border-white/10 flex items-center justify-around px-6">
+<div class="flex flex-col items-center text-sage">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium mt-1 uppercase">Dashboard</span>
+</div>
+<div class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="text-[10px] font-bold mt-1 uppercase">Budget</span>
+</div>
+<div class="flex flex-col items-center text-sage">
+<span class="material-symbols-outlined">palette</span>
+<span class="text-[10px] font-medium mt-1 uppercase">Editor</span>
+</div>
+<div class="flex flex-col items-center text-sage">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium mt-1 uppercase">Settings</span>
+</div>
+</nav>
+</div>
+</body></html>

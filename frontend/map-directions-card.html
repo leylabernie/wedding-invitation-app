@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Map &amp; Directions Card</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b6c",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221016",
+                "paper": "#fdfbf7",
+                "ink": "#2c2c2c"
+              },
+              fontFamily: {
+                "display": ["Noto Serif", "serif"],
+                "sans": ["Noto Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+              boxShadow: {
+                "card": "0 10px 30px -5px rgba(0, 0, 0, 0.1)",
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tool {
+            color: #ee2b6c;
+            background-color: #fce7f3;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .map-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .hand-drawn-border {
+             border: 2px solid #2c2c2c;
+             border-radius: 2px 255px 3px 25px / 255px 5px 225px 5px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100">
+<div class="relative flex h-full min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-hidden">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-20 border-b border-slate-200 dark:border-slate-800">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex flex-col items-center">
+<h2 class="text-slate-900 dark:text-white text-lg font-display font-bold leading-tight tracking-[-0.015em] text-center">Map &amp; Directions</h2>
+<span class="text-xs text-slate-500 font-medium">Golden Eucalyptus Suite</span>
+</div>
+<button class="text-primary font-semibold text-sm px-3 py-1.5 rounded-lg hover:bg-pink-50 dark:hover:bg-slate-800 transition-colors">
+                Save
+            </button>
+</div>
+<div class="flex-1 overflow-y-auto hide-scrollbar p-6 flex flex-col items-center justify-start pb-40">
+<div class="w-full max-w-sm aspect-[3/4] bg-paper shadow-card relative p-6 flex flex-col gap-4 overflow-hidden mb-6 mx-auto transform transition-transform duration-300">
+<div class="absolute top-0 right-0 w-24 h-24 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuAj7xOCsxSSrNF2mTLYhqxBsxyQ9fiOt6fVN3xQmZAos4jTqPxFmw_y1KIFV4VRAWybmGXh4iJPrX8Vt7rg3QYvgw6yPVEJd0wixsuqiSV8Chi9i27Lzobrw703C68VTYGgfOTp1AQoCdxLNGUzD-tfXBUNgEUw8pNB2TCoF3SHFNBchfAhUdm-cDbHJlSuRrTun4KUuXInpYNAyTh0UIsZhQf3RY6JOgQG4l9DYCWK96ePny3_7XiAXTXL7uKeScXwoG7jWbVTAPE')] bg-contain bg-no-repeat opacity-40 mix-blend-multiply pointer-events-none rotate-180"></div>
+<div class="absolute bottom-0 left-0 w-24 h-24 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuAj7xOCsxSSrNF2mTLYhqxBsxyQ9fiOt6fVN3xQmZAos4jTqPxFmw_y1KIFV4VRAWybmGXh4iJPrX8Vt7rg3QYvgw6yPVEJd0wixsuqiSV8Chi9i27Lzobrw703C68VTYGgfOTp1AQoCdxLNGUzD-tfXBUNgEUw8pNB2TCoF3SHFNBchfAhUdm-cDbHJlSuRrTun4KUuXInpYNAyTh0UIsZhQf3RY6JOgQG4l9DYCWK96ePny3_7XiAXTXL7uKeScXwoG7jWbVTAPE')] bg-contain bg-no-repeat opacity-40 mix-blend-multiply pointer-events-none"></div>
+<div class="text-center z-10 mt-2">
+<h3 class="font-display text-2xl text-ink font-bold mb-1">Map &amp; Directions</h3>
+<p class="font-display italic text-sm text-slate-500">How to find us</p>
+</div>
+<div class="flex-1 relative border-2 border-slate-200 rounded-lg overflow-hidden bg-[#fdfdfd]">
+<div class="absolute inset-0 map-pattern opacity-50"></div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
+<path d="M 20 0 Q 25 30 10 50 T 40 100" fill="none" stroke="#e2e8f0" stroke-width="3"></path>
+<path d="M 0 60 Q 30 55 60 65 T 100 50" fill="none" stroke="#e2e8f0" stroke-width="3"></path>
+<path d="M 60 0 L 60 30 Q 60 45 80 50" fill="none" stroke="#e2e8f0" stroke-dasharray="4" stroke-width="2"></path>
+</svg>
+<div class="absolute top-[35%] left-[45%] flex flex-col items-center group cursor-move">
+<span class="material-symbols-outlined text-primary text-3xl drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="bg-white/90 px-2 py-0.5 rounded text-[10px] font-display font-bold text-ink shadow-sm mt-0.5 border border-slate-100">The Venue</span>
+</div>
+<div class="absolute top-[60%] left-[20%] flex flex-col items-center group cursor-move opacity-80">
+<span class="material-symbols-outlined text-slate-600 text-2xl drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">hotel</span>
+<span class="bg-white/90 px-2 py-0.5 rounded text-[10px] font-display font-bold text-ink shadow-sm mt-0.5 border border-slate-100">Grand Hotel</span>
+</div>
+<div class="absolute bottom-[20%] right-[20%] flex flex-col items-center group cursor-move opacity-80">
+<span class="material-symbols-outlined text-slate-600 text-2xl drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">local_bar</span>
+<span class="bg-white/90 px-2 py-0.5 rounded text-[10px] font-display font-bold text-ink shadow-sm mt-0.5 border border-slate-100">After Party</span>
+</div>
+</div>
+<div class="z-10 bg-transparent border border-dashed border-slate-300 rounded p-2 hover:border-slate-400 transition-colors">
+<p class="font-display text-xs text-ink leading-relaxed text-center">
+                        From the highway, take exit 42 onto Main St. Continue for 2 miles, then turn left onto Garden Lane. The venue will be on your right.
+                    </p>
+</div>
+</div>
+<p class="text-slate-400 text-xs text-center mb-4">Tap on map items to edit or drag to move</p>
+<div class="w-full max-w-sm space-y-4">
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wide mb-2">Written Directions</label>
+<textarea class="w-full text-sm text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-900 border-none rounded-lg focus:ring-1 focus:ring-primary p-3 resize-none" placeholder="Enter detailed directions here..." rows="3"></textarea>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 z-30 pb-safe">
+<div class="flex flex-col">
+<div class="flex border-b border-slate-100 dark:border-slate-800">
+<button class="flex-1 py-3 text-xs font-semibold text-primary border-b-2 border-primary">Map Elements</button>
+<button class="flex-1 py-3 text-xs font-semibold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Style</button>
+<button class="flex-1 py-3 text-xs font-semibold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Text</button>
+</div>
+<div class="p-4 overflow-x-auto hide-scrollbar">
+<div class="flex gap-4 min-w-max">
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-pink-50 dark:group-hover:bg-slate-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<span class="text-[10px] font-medium text-slate-600 dark:text-slate-300">Venue</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-pink-50 dark:group-hover:bg-slate-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300 text-2xl">hotel</span>
+</div>
+<span class="text-[10px] font-medium text-slate-600 dark:text-slate-300">Hotel</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-pink-50 dark:group-hover:bg-slate-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300 text-2xl">local_bar</span>
+</div>
+<span class="text-[10px] font-medium text-slate-600 dark:text-slate-300">Party</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-pink-50 dark:group-hover:bg-slate-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300 text-2xl">local_parking</span>
+</div>
+<span class="text-[10px] font-medium text-slate-600 dark:text-slate-300">Parking</span>
+</div>
+<div class="w-px h-14 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-pink-50 dark:group-hover:bg-slate-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300 text-2xl">landscape</span>
+</div>
+<span class="text-[10px] font-medium text-slate-600 dark:text-slate-300">Landmark</span>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-pink-50 dark:group-hover:bg-slate-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300 text-2xl">route</span>
+</div>
+<span class="text-[10px] font-medium text-slate-600 dark:text-slate-300">Route</span>
+</div>
+</div>
+</div>
+<div class="h-6 w-full"></div>
+</div>
+</div>
+</div>
+
+</body></html>

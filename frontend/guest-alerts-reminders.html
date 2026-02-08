@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guest Alerts &amp; Reminders</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b6c",
+                "primary-light": "#fce7ef",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221016",
+              },
+              fontFamily: {
+                "display": ["Noto Serif", "serif"],
+                "sans": ["Noto Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden pb-24">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-200/50 dark:border-slate-800/50 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-display font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Alerts &amp; Reminders</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-12 w-12 bg-transparent text-primary">
+<span class="material-symbols-outlined text-2xl">add_circle</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 px-4 py-4">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm flex flex-col justify-between h-28 relative overflow-hidden">
+<div class="absolute right-[-10px] top-[-10px] opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">schedule</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">Next Scheduled</p>
+<h3 class="text-slate-900 dark:text-white text-2xl font-display font-bold mt-1">Tomorrow</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs truncate">RSVP Deadline Reminder</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm flex flex-col justify-between h-28 relative overflow-hidden">
+<div class="absolute right-[-10px] top-[-10px] opacity-10">
+<span class="material-symbols-outlined text-8xl text-green-500">check_circle</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">Sent Alerts</p>
+<h3 class="text-slate-900 dark:text-white text-2xl font-display font-bold mt-1">12</h3>
+</div>
+<p class="text-green-600 dark:text-green-400 text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> 98% Open Rate
+            </p>
+</div>
+</div>
+<div class="flex flex-col px-4 pt-2">
+<div class="flex items-center justify-between pb-3">
+<h2 class="text-slate-900 dark:text-white text-lg font-display font-bold leading-tight tracking-tight">Upcoming</h2>
+<button class="text-primary text-sm font-semibold">View calendar</button>
+</div>
+<div class="flex flex-col gap-3">
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border-l-4 border-primary">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="bg-primary-light text-primary px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide">Email</span>
+<span class="text-slate-400 text-xs">Oct 15, 9:00 AM</span>
+</div>
+<button class="text-slate-400">
+<span class="material-symbols-outlined text-xl">more_horiz</span>
+</button>
+</div>
+<h3 class="text-slate-900 dark:text-white font-semibold text-base mb-1">RSVP Deadline Approaching</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Friendly reminder that RSVPs are due in 3 days. Can't wait to celebrate!</p>
+<div class="flex items-center gap-2">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-slate-800 bg-slate-200"></div>
+<div class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-slate-800 bg-slate-300"></div>
+<div class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-slate-800 bg-slate-400"></div>
+</div>
+<span class="text-xs text-slate-500 dark:text-slate-400">Targeting 45 guests (No Response)</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border-l-4 border-orange-400">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="bg-orange-100 text-orange-500 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide">Push</span>
+<span class="text-slate-400 text-xs">Nov 01, 10:00 AM</span>
+</div>
+<button class="text-slate-400">
+<span class="material-symbols-outlined text-xl">more_horiz</span>
+</button>
+</div>
+<h3 class="text-slate-900 dark:text-white font-semibold text-base mb-1">Hotel Block Closing Soon</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Last chance to book your room at the discounted rate!</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">group</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">All Guests</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col mt-6">
+<div class="flex items-center justify-between px-4 pb-3">
+<h2 class="text-slate-900 dark:text-white text-lg font-display font-bold leading-tight tracking-tight">Suggested Templates</h2>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar px-4 pb-4 gap-3">
+<div class="flex-none w-64 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm flex flex-col gap-3 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-2">
+<span class="bg-purple-100 text-purple-600 p-1.5 rounded-lg material-symbols-outlined text-sm">event_note</span>
+<span class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase">Pre-Event</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">Welcome Dinner Details</h4>
+<p class="text-xs text-slate-500 mt-1 line-clamp-2">Just a quick note about the welcome dinner location and timing...</p>
+</div>
+<button class="mt-auto w-full py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">Use Template</button>
+</div>
+<div class="flex-none w-64 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm flex flex-col gap-3 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-2">
+<span class="bg-blue-100 text-blue-600 p-1.5 rounded-lg material-symbols-outlined text-sm">directions_bus</span>
+<span class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase">Logistics</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">Shuttle Schedule</h4>
+<p class="text-xs text-slate-500 mt-1 line-clamp-2">Shuttles will depart from the main hotel starting at 3:00 PM...</p>
+</div>
+<button class="mt-auto w-full py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">Use Template</button>
+</div>
+<div class="flex-none w-64 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm flex flex-col gap-3 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-2">
+<span class="bg-green-100 text-green-600 p-1.5 rounded-lg material-symbols-outlined text-sm">cloud</span>
+<span class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase">Update</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">Weather Update</h4>
+<p class="text-xs text-slate-500 mt-1 line-clamp-2">Looks like rain! The ceremony will now be held in the ballroom...</p>
+</div>
+<button class="mt-auto w-full py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">Use Template</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col px-4 mt-2 mb-6">
+<h2 class="text-slate-900 dark:text-white text-lg font-display font-bold leading-tight tracking-tight mb-3">Recent History</h2>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="flex items-center p-4 border-b border-slate-100 dark:border-slate-700">
+<div class="bg-green-100 dark:bg-green-900/30 text-green-600 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">mark_email_read</span>
+</div>
+<div class="ml-3 flex-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Save the Dates Sent</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Sep 10 • 120 Recipients</p>
+</div>
+<div class="text-right">
+<span class="text-xs font-semibold text-green-600">Sent</span>
+</div>
+</div>
+<div class="flex items-center p-4 border-b border-slate-100 dark:border-slate-700">
+<div class="bg-slate-100 dark:bg-slate-700 text-slate-500 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</div>
+<div class="ml-3 flex-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Website Live Notification</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Aug 22 • 45 Recipients</p>
+</div>
+<div class="text-right">
+<span class="text-xs font-semibold text-green-600">Sent</span>
+</div>
+</div>
+<div class="flex items-center p-4">
+<div class="bg-red-50 dark:bg-red-900/20 text-red-500 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">error</span>
+</div>
+<div class="ml-3 flex-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Registry Link Update</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Aug 15 • Failed to send</p>
+</div>
+<div class="text-right">
+<button class="text-xs font-semibold text-primary underline">Retry</button>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 h-20 pb-4 flex items-center justify-around z-20">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-slate-400">home</span>
+<span class="text-[10px] font-medium text-slate-400">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+<span class="text-[10px] font-medium text-primary">Alerts</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="bg-primary rounded-full p-2 -mt-10 shadow-lg shadow-primary/40 flex items-center justify-center border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-white text-3xl">add</span>
+</div>
+<span class="text-[10px] font-medium text-slate-400 mt-1">Create</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-slate-400">people</span>
+<span class="text-[10px] font-medium text-slate-400">Guests</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-slate-400">settings</span>
+<span class="text-[10px] font-medium text-slate-400">Settings</span>
+</div>
+</div>
+</div>
+
+</body></html>

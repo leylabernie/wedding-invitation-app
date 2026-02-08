@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Envelope &amp; Liners Customization</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d41173",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .premium-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display">
+<!-- Top Navigation Bar -->
+<div class="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex size-10 items-center justify-center rounded-full bg-white/10 border border-white/10 cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-sm uppercase tracking-[0.2em] font-medium text-slate-500 dark:text-slate-400">Step 3 of 5</h2>
+<h1 class="text-lg font-bold leading-tight">Envelopes</h1>
+</div>
+<div class="flex size-10 items-center justify-center rounded-full bg-white/10 border border-white/10 cursor-pointer">
+<span class="material-symbols-outlined text-2xl">help_outline</span>
+</div>
+</div>
+</div>
+<main class="pt-20 pb-32 max-w-md mx-auto min-h-screen">
+<!-- 3D Preview Section -->
+<div class="px-4 py-6">
+<div class="relative w-full aspect-[4/5] bg-gradient-to-br from-slate-200 to-slate-300 dark:from-[#311a26] dark:to-[#1a0c13] rounded-2xl flex items-center justify-center overflow-hidden premium-shadow">
+<!-- Mockup Image -->
+<div class="w-full h-full bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center" data-alt="3D mockup of a high-end open envelope with gold liner" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCw6-3eLc-QX9u9U0NywZ1YanMPK2CK7u9o7JFES389a8HDYqyJiARmnySR-Z-sUwJlK_f8YM4I32k0WeIH7DeU9Tzyis-p4IqAHAws6oXA9vyapOZEDt8ZehwZVMW2zemjf0Bf8KbRvkua5gjei4guO77Fy7sa2uhkNMbp1Poh_T7RXvLbhjPPoB4FO10VajREv-CSAkuTS78QJbfBv7MIVneQipOOwjxqcbvwBsBjJU_Yq4jSqWtNceq6tUe_FxWgGN8tfalazYo");'>
+</div>
+<!-- Overlay Tools -->
+<div class="absolute bottom-4 right-4 flex flex-col gap-2">
+<button class="size-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 text-white">
+<span class="material-symbols-outlined text-xl">3d_rotation</span>
+</button>
+<button class="size-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 text-white">
+<span class="material-symbols-outlined text-xl">zoom_in</span>
+</button>
+</div>
+<div class="absolute top-4 left-4 bg-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded text-white">
+                    Premium Quality
+                </div>
+</div>
+</div>
+<!-- Customization Controls -->
+<div class="px-4 space-y-8">
+<!-- Envelope Colors -->
+<section>
+<div class="flex justify-between items-end mb-4">
+<h3 class="text-lg font-bold tracking-tight">Envelope Color</h3>
+<span class="text-xs text-slate-400 font-medium">Dusty Rose</span>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+<label class="shrink-0 size-12 rounded-full border-2 border-white ring-2 ring-primary ring-offset-2 ring-offset-background-dark cursor-pointer flex-none" style="background-color: #d4a5a5;">
+<input checked="" class="hidden" name="env_color" type="radio"/>
+</label>
+<label class="shrink-0 size-12 rounded-full border-2 border-slate-700 hover:border-slate-500 cursor-pointer flex-none" style="background-color: #2f4f4f;">
+<input class="hidden" name="env_color" type="radio"/>
+</label>
+<label class="shrink-0 size-12 rounded-full border-2 border-slate-700 hover:border-slate-500 cursor-pointer flex-none" style="background-color: #ffffff;">
+<input class="hidden" name="env_color" type="radio"/>
+</label>
+<label class="shrink-0 size-12 rounded-full border-2 border-slate-700 hover:border-slate-500 cursor-pointer flex-none" style="background-color: #e5e4e2;">
+<input class="hidden" name="env_color" type="radio"/>
+</label>
+<label class="shrink-0 size-12 rounded-full border-2 border-slate-700 hover:border-slate-500 cursor-pointer flex-none" style="background-color: #1a1a1a;">
+<input class="hidden" name="env_color" type="radio"/>
+</label>
+<label class="shrink-0 size-12 rounded-full border-2 border-slate-700 hover:border-slate-500 cursor-pointer flex-none" style="background-color: #b8860b;">
+<input class="hidden" name="env_color" type="radio"/>
+</label>
+</div>
+</section>
+<!-- Liner Patterns -->
+<section>
+<div class="flex justify-between items-end mb-4">
+<h3 class="text-lg font-bold tracking-tight">Liner Pattern</h3>
+<span class="text-xs text-primary font-bold">+$1.20/ea</span>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+<div class="shrink-0 flex flex-col items-center gap-2">
+<div class="size-16 rounded-xl border-2 border-primary bg-cover bg-center ring-2 ring-primary/20 ring-offset-2 ring-offset-background-dark" data-alt="Gold leaf pattern texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCE5q4ZK4oPUs-GyeiK2Nv_AXSHTuXAsQLhIgzO0SHsLsO-QBOwJY2-YmX1Q2irkW3F2dzxpuWsLIk7H1faEyGkITXHxi11X_LGCnBsMMALaTGYuR4DN2bVFDKk1mQVJtM9_nEAd9FlY01DbqlM0Fn-NYqS1m9ltNrc-_Bywc1dRfip3sRG6Zyl6MmnujOGMkSXTaRSjHrJF_mVDPk_zAE4AStjyT-6dlQbh4bT8DHT6KUV2WUWKUXu3q4YLKyS0ZBmSdS77HXOuS0');"></div>
+<span class="text-[10px] font-bold uppercase tracking-tighter opacity-80">Gold Leaf</span>
+</div>
+<div class="shrink-0 flex flex-col items-center gap-2">
+<div class="size-16 rounded-xl border-2 border-transparent bg-slate-800 bg-cover bg-center" data-alt="Modern floral pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAiX4rDOD6CKKvz1azrNk2DQYJ1KZH5jJ3a47qudqH33FqZ8DwfCNXWqPo-gGS3qIVsGDK8pDSAP1_7fYo6569Nq5tbiuaOSX0BN-21XurqfmBiBL_fX_CCdcaF0rwR6RcwpXOhqDPDYXELLbM1hsBjwFgNObu9WwIqezeM-twzHjGLp84R48mYGWLu9zy51OJen4ldXdcrcUi23QtsowQca8D_FH6TVltE228q-cucUA3SeVy82hHPpZ0ikqDvQO8WMT05FM-k9xI');"></div>
+<span class="text-[10px] font-bold uppercase tracking-tighter opacity-40">Floral</span>
+</div>
+<div class="shrink-0 flex flex-col items-center gap-2">
+<div class="size-16 rounded-xl border-2 border-transparent bg-slate-800 bg-cover bg-center" data-alt="Geometric minimalist pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9AngGiPMoRLb4bWtePm5Lb3mMGuAwhnNCLO9owPGvM0RHBN5Fjynnj3_BxDO2lfk-xagUpI9u_UxJIbY3I59NM9x7GTib_lDq9fryfEK05eMq1Gx0tPjjv8dyT_Pv6KUANOI4DqkmKT4UPJmr8kK4M_kyj7b6Ix3X6pqGPU_QtTI6vZmVhHTPKDku3aDBP3Oax-Sn4UOPWF0MUcZd4ZF3q71bIgD-n7eA09f0oDaEEEponBdTRWCVQAdRg4tMKRH_flcmQLroxGI');"></div>
+<span class="text-[10px] font-bold uppercase tracking-tighter opacity-40">Geometric</span>
+</div>
+<div class="shrink-0 flex flex-col items-center gap-2">
+<div class="size-16 rounded-xl border-2 border-transparent bg-slate-800 bg-cover bg-center" data-alt="Abstract watercolor wash pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDb0hwaLJ6rqy_Bdmo1bS0OP9zuRhF0QLYbQtjjEfSLnqYfDZlwT2zfgo1Ie_UW2eSLOHfNnGPs4XvoLQU3zLkMUERT6y9RVH-rYK9aHBlAMrAo8nw7BsZDtaqaqPnrr_0KHCYOm4fJD1yfFdi8nGaCFCyKMJF4HFoE9B-DfkUefLFKDkC-n2KtjT-Z80EahZjh3K5UGiEvpaOUSHGw41sMjxxPuUCaEHdxRm9noQ2KiHL6qEHdUthOg0TZ7NNvHMgRmoEoQfE3PjA');"></div>
+<span class="text-[10px] font-bold uppercase tracking-tighter opacity-40">Watercolor</span>
+</div>
+</div>
+</section>
+<!-- Address Printing Toggle -->
+<section class="bg-white/5 dark:bg-white/5 p-5 rounded-2xl border border-white/10">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="text-base font-bold">Address Printing</h3>
+<p class="text-xs text-slate-400">Recipient &amp; return addresses</p>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+<div class="space-y-4">
+<label class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Calligraphy Style</label>
+<div class="flex gap-3 overflow-x-auto no-scrollbar">
+<div class="shrink-0 w-32 h-20 bg-white rounded-lg flex items-center justify-center border-2 border-primary shadow-lg shadow-primary/10">
+<span class="text-slate-900 font-serif text-lg italic tracking-tighter" style="font-family: 'Times New Roman', serif;">Elegant Script</span>
+</div>
+<div class="shrink-0 w-32 h-20 bg-white rounded-lg flex items-center justify-center border border-slate-200">
+<span class="text-slate-900 font-sans text-sm font-light uppercase tracking-[0.2em]">Modern Serif</span>
+</div>
+<div class="shrink-0 w-32 h-20 bg-white rounded-lg flex items-center justify-center border border-slate-200">
+<span class="text-slate-900 font-serif text-lg italic" style="font-family: cursive;">Classic Love</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Sticky Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark/90 backdrop-blur-xl border-t border-white/10 p-4 pb-8 z-50">
+<div class="max-w-md mx-auto flex items-center gap-4">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-widest text-slate-400">Total Price</span>
+<span class="text-xl font-extrabold">$245.00</span>
+</div>
+<button class="flex-1 bg-primary text-white font-bold h-14 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span>Save to Suite</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>
