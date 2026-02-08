@@ -1,14 +1,14 @@
 # 🚀 GitHub Deployment Guide
 
 ## Repository Information
-**Repository**: https://github.com/leylabernie/wedding-invitation-app  
+**Repository**: https://github.com/leylabernie/Wedding_Invitation_Bundle
 **Branch**: main
 
 ## Quick Deployment Options
 
 ### 1. Vercel (Recommended)
 1. Connect your GitHub account to [Vercel](https://vercel.com)
-2. Import the repository: `leylabernie/wedding-invitation-app`
+2. Import the repository: `leylabernie/Wedding_Invitation_Bundle`
 3. Configure environment variables:
    - `NODE_ENV`: production
    - `MONGODB_URI`: Your MongoDB connection string (optional)
@@ -33,8 +33,8 @@
 ### Backend Deployment (Node.js)
 ```bash
 # Clone the repository
-git clone https://github.com/leylabernie/wedding-invitation-app.git
-cd wedding-invitation-app
+git clone https://github.com/leylabernie/Wedding_Invitation_Bundle.git
+cd Wedding_Invitation_Bundle
 
 # Install backend dependencies
 cd backend
@@ -104,8 +104,8 @@ CMD ["node", "backend/server.js"]
 
 Build and run:
 ```bash
-docker build -t wedding-invitation-app .
-docker run -p 5000:5000 wedding-invitation-app
+docker build -t Wedding_Invitation_Bundle .
+docker run -p 5000:5000 Wedding_Invitation_Bundle
 ```
 
 ## Production Considerations
@@ -159,5 +159,5 @@ For deployment issues:
 
 ---
 
-**Repository URL**: https://github.com/leylabernie/wedding-invitation-app  
+**Repository URL**: https://github.com/leylabernie/Wedding_Invitation_Bundle
 **Deploy URL**: Configure based on your hosting provider

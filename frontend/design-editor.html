@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Design Editor - Wedding Suite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b6c",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221016",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Noto Sans", sans-serif;
+        }
+        .canvas-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full flex-col overflow-hidden max-w-[480px] mx-auto shadow-2xl bg-white dark:bg-background-dark">
+<!-- Top Navigation -->
+<header class="flex items-center bg-white dark:bg-background-dark px-4 py-3 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="text-slate-700 dark:text-slate-300 flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-slate-900 dark:text-white text-base font-bold leading-tight font-display tracking-tight">Design Editor</h2>
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">Wedding Suite</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="text-slate-400 dark:text-slate-500 flex size-8 items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">undo</span>
+</div>
+<button class="text-primary text-sm font-bold leading-normal px-3 py-1 rounded-full hover:bg-primary/10 transition-colors">
+                    Save
+                </button>
+</div>
+</header>
+<!-- Category Tabs -->
+<div class="bg-white dark:bg-background-dark">
+<div class="flex border-b border-gray-100 dark:border-gray-800 px-4 gap-6 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-[2px] border-primary text-primary pb-2 pt-3 shrink-0" href="#">
+<p class="text-sm font-bold tracking-tight">Invitation</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[2px] border-transparent text-slate-400 dark:text-slate-500 pb-2 pt-3 shrink-0" href="#">
+<p class="text-sm font-medium tracking-tight">RSVP</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[2px] border-transparent text-slate-400 dark:text-slate-500 pb-2 pt-3 shrink-0" href="#">
+<p class="text-sm font-medium tracking-tight">Details</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[2px] border-transparent text-slate-400 dark:text-slate-500 pb-2 pt-3 shrink-0" href="#">
+<p class="text-sm font-medium tracking-tight">Signage</p>
+</a>
+</div>
+</div>
+<!-- Main Preview Canvas -->
+<main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-zinc-950 p-6 flex flex-col items-center justify-center relative">
+<div class="w-full aspect-[3/4] max-w-[320px] bg-white dark:bg-zinc-900 canvas-shadow rounded-lg overflow-hidden flex flex-col items-center justify-center p-8 text-center relative border border-gray-100 dark:border-zinc-800">
+<!-- Background Pattern Layer -->
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#ee2b6c_0.5px,transparent_0.5px)] [background-size:16px_16px]"></div>
+<!-- Floral Elements Preview -->
+<div class="absolute top-0 left-0 w-24 h-24 rotate-[-15deg] opacity-80">
+<img alt="Elegant floral corner decoration element" class="w-full h-full object-contain" data-alt="Floral corner border decoration illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3mmn-h2iFfw8mAXzD0pEeRJOXhL5zSTExjmdXqXnVx-3J8cHpDEDsQv6tDOZW6IZHHegYqt1ZMZU7tTdfn7ZEyQ-sSNs2PRg2SDp3T_s9bptlDGUeeUZH49jLpEKtaX99GGzsj6a92xLlMicuuMc19y7cBFcqBIh_8C0Dff1kbOFTpUImECbV7kJb5Gbbmf4ljJ-nYR5uImOMQdm6L83V6C_8kMKYo_fgf5pGi2oUhANWaBfy4jd8JSXM5Y30aJhZpaNs8ZS51pg"/>
+</div>
+<div class="absolute bottom-0 right-0 w-24 h-24 rotate-[165deg] opacity-80">
+<img alt="Elegant floral corner decoration element" class="w-full h-full object-contain" data-alt="Floral corner border decoration illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPomOiCMxpgNHueEF9V11D8myU88ZzAHkZZ4Cs2TXUOsfRxv-c8yj2GHRXy1uQvA8EW-noLqYJIFpAPJIR8cZ759rIEXp9BnxaYpvq8qidsqX_GPRln2yqHQzMwN85Dp31ioQzK5x6vaDORvP58SHGSApxztCVr0l2bJPYYD_962q2hvypQtNQ4EIhmg7v5AMCImdmvjxwoWa8ToBTd1NDKP2BX2KOkBx33o3a1SRvqplq5CIx21Qgf60RsX0G9TP0CMKXAutAdjE"/>
+</div>
+<div class="z-10 flex flex-col items-center">
+<p class="font-display italic text-primary text-lg mb-2">Together with their families</p>
+<h1 class="font-display text-4xl text-slate-800 dark:text-slate-100 mb-1 leading-tight">Sarah</h1>
+<span class="font-display text-2xl text-slate-400 mb-1">&amp;</span>
+<h1 class="font-display text-4xl text-slate-800 dark:text-slate-100 mb-6 leading-tight">Michael</h1>
+<div class="w-12 h-px bg-primary/30 mb-6"></div>
+<p class="font-sans uppercase tracking-[0.2em] text-[10px] font-bold text-slate-500 dark:text-slate-400 mb-2">Saturday, June 12th, 2024</p>
+<p class="font-sans text-xs text-slate-600 dark:text-slate-300">The Grand Oak Estate, Sonoma Valley</p>
+</div>
+<!-- Resize/Selection Handle Mockup -->
+<div class="absolute inset-4 border-2 border-primary/40 rounded-lg pointer-events-none">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 size-2 bg-primary rounded-full ring-4 ring-white dark:ring-zinc-900"></div>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 size-2 bg-primary rounded-full ring-4 ring-white dark:ring-zinc-900"></div>
+</div>
+</div>
+<!-- Quick Color Palettes -->
+<div class="mt-8 flex gap-3">
+<button class="size-8 rounded-full bg-[#ee2b6c] ring-2 ring-offset-2 ring-primary ring-offset-gray-50 dark:ring-offset-zinc-950"></button>
+<button class="size-8 rounded-full bg-[#3b4d61]"></button>
+<button class="size-8 rounded-full bg-[#d4af37]"></button>
+<button class="size-8 rounded-full bg-[#6b8e23]"></button>
+<button class="size-8 rounded-full bg-[#704241]"></button>
+</div>
+</main>
+<!-- Quick Edit Panel (Drawer style) -->
+<div class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 px-4 py-5 shadow-[0_-10px_20px_-5px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-slate-900 dark:text-white text-sm font-bold tracking-tight">Quick Edit</h3>
+<span class="material-symbols-outlined text-slate-400 text-sm">keyboard_arrow_down</span>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-1">
+<label class="flex flex-col min-w-[140px] shrink-0">
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider pb-1.5 pl-1">Name 1</p>
+<input class="w-full rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary/30 border border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900 h-10 px-3 text-sm font-normal" value="Sarah"/>
+</label>
+<label class="flex flex-col min-w-[140px] shrink-0">
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider pb-1.5 pl-1">Name 2</p>
+<input class="w-full rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary/30 border border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900 h-10 px-3 text-sm font-normal" value="Michael"/>
+</label>
+<label class="flex flex-col min-w-[140px] shrink-0">
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider pb-1.5 pl-1">Date</p>
+<input class="w-full rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary/30 border border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900 h-10 px-3 text-sm font-normal" value="June 12th"/>
+</label>
+</div>
+</div>
+<!-- Bottom Tab Bar -->
+<nav class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 px-6 pt-2 pb-6 flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-primary">format_size</span>
+<span class="text-[10px] font-bold text-primary">Text</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">auto_awesome</span>
+<span class="text-[10px] font-bold text-slate-500">Elements</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">grid_view</span>
+<span class="text-[10px] font-bold text-slate-500">Layout</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">palette</span>
+<span class="text-[10px] font-bold text-slate-500">Theme</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">imagesmode</span>
+<span class="text-[10px] font-bold text-slate-500">Paper</span>
+</button>
+</nav>
+<!-- Floating Action Button for Elements -->
+<div class="absolute bottom-32 right-6">
+<button class="size-12 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+</div>
+</div>
+</body></html>

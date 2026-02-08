@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Save the Date: Photo Layout Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d41173",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .photo-overlay { background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 40%); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased h-screen flex flex-col overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between px-4 py-3 bg-white/5 backdrop-blur-md border-b border-white/10 shrink-0">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex flex-col items-center">
+<h1 class="text-sm font-semibold tracking-wider uppercase">Photo First</h1>
+<p class="text-[10px] text-white/50">VARIANT 1 OF 3</p>
+</div>
+<button class="px-4 py-1.5 bg-primary text-white rounded-full text-sm font-bold shadow-lg shadow-primary/20">
+            Next
+        </button>
+</header>
+<!-- Main Editor Canvas -->
+<main class="flex-1 relative overflow-hidden flex items-center justify-center p-6">
+<!-- The Live Card Preview -->
+<div class="relative w-full aspect-[3/4] max-h-full bg-slate-800 rounded-xl shadow-2xl overflow-hidden group">
+<!-- Main Engagement Photo -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700" data-alt="A romantic high-quality engagement photo of a couple in a natural setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAVzfIy639UbzTPhQXms2F60Bb8LMfNPqJkc7-Flv2bz3pQyP8dYUuWlbF7rvGxNw_GBJmPU5buyGYYsi1khhDCWh-KcrT5czJbNOvKEZaCg8DJ_AxFV412XGTMwLC1XWhn-QHVxDl4c9pGnfTaBcRNNaa1WCNgLs0XQgBbtz-D45ef1i3X9ev9u-jII07KF6e-K3LdC3uRwZ4e0sUv44PaIQtWdD5AhpZmuy9vnESATgjYRab_7EvHhEPTycnUSRIFJ353KQJDO4');">
+</div>
+<!-- Gradient Overlay for Legibility -->
+<div class="absolute inset-0 photo-overlay"></div>
+<!-- Text Content Overlay -->
+<div class="absolute inset-0 flex flex-col justify-end items-center p-8 pb-12 text-center text-white">
+<p class="text-xs tracking-[0.3em] uppercase mb-4 opacity-90">Save the Date</p>
+<h2 class="text-4xl md:text-5xl font-light mb-2 italic">Sofia &amp; Julian</h2>
+<div class="h-[1px] w-12 bg-white/40 my-4"></div>
+<p class="text-lg tracking-tight font-medium">October 12, 2024</p>
+<p class="text-xs uppercase tracking-widest mt-1 opacity-80">Tuscany, Italy</p>
+</div>
+<!-- Layout Guides (Visual Only) -->
+<div class="absolute inset-4 border border-white/20 pointer-events-none rounded-lg"></div>
+</div>
+</main>
+<!-- Bottom Controls Area -->
+<footer class="bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-white/10 p-4 pb-8 shrink-0">
+<!-- Layout Style Toggles -->
+<div class="flex justify-center gap-2 mb-6">
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-white flex items-center justify-center gap-2 text-xs font-semibold">
+<span class="material-symbols-outlined text-lg">fullscreen</span> Full Bleed
+            </button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-600 dark:text-white/70 flex items-center justify-center gap-2 text-xs font-semibold border border-transparent hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-lg">crop_original</span> Framed
+            </button>
+</div>
+<!-- Filter Selection Scroll -->
+<div class="mb-6">
+<div class="flex justify-between items-center mb-3 px-1">
+<label class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Color Palette Match</label>
+<span class="text-[10px] text-primary font-bold">85% Match</span>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar py-1">
+<!-- Original -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-14 h-14 rounded-xl border-2 border-primary overflow-hidden ring-2 ring-primary/20">
+<div class="w-full h-full bg-cover bg-center" data-alt="Small thumbnail preview of original photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAX3VeO8w4_5xQm8HNJpbCMDLVAP0VczXlfhXu6TCravEGQYXBp-oJNF9HSJ36PwExc6ScMpog4zUgFpoN7z1BozEp7NPQBNnEGZh7xYaRUkt3R6PthVH0R2Vn5j2InwyFSOPdEMRs8GTufm8SVcKwidBJUuZQt6KGd_5f3Rrv99NahyvB02tQXKDfWv_CN3qJ2GxjGgZP4_jmBk6C1trvnxF7JNokJiIFNoJhPc06opFl8CR7lwP_MylXbA3SkIZe0HkRR0MoxXsg');"></div>
+</div>
+<span class="text-[10px] font-medium text-primary">Original</span>
+</div>
+<!-- Filter: Berry Warmth -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-14 h-14 rounded-xl border border-zinc-200 dark:border-white/10 overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center mix-blend-multiply opacity-80" data-alt="Filter preview with berry warmth tones" style="background-color: #d41173; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmOOb8BFw-Ao8RAbpe5i4Ezv55mLaRmbpa0f2a_7rbp_DJqfeCHxfNykaFoqwET2tQn3j6xwUh97AgrfV04SHZxC4q8up8IIEaWP3OS3c4tn7rLEuT-poz-lFOxWwF6aSpaXXqBFZsdXSvALLOVP7dLbp9s_4hkpWSXraKeXYl02udHCxOOC_dv1siYQRsfZZJ6v1qGsIdOX_bhR2VpfURXzGN11T7B1Cr4pDRuTP5sJSx7Q0-0Rv8ZxIr8u69ycVF6c6qcUUxWHM');"></div>
+</div>
+<span class="text-[10px] font-medium text-zinc-400">Berry</span>
+</div>
+<!-- Filter: Noir -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-14 h-14 rounded-xl border border-zinc-200 dark:border-white/10 overflow-hidden grayscale">
+<div class="w-full h-full bg-cover bg-center" data-alt="Filter preview in black and white" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCm8s8afuDWduiMF24h_9Y_YQwCHuJhTM8ikoY29klMrf11W81D3UhbD_0cs2LCzKuKtqsJKeqi8k08i_O4wsieCHlv02E-EMa0C4nW6aEtLFkvRnHSrCuSN0mhosq1a5glVu9u7oNOrbPYcy_xzBFyBiipOVclklJcmaTLgYyZshKks8bkfYGqdmaC6JLHQBipEnRKA61e4FPeR4PCzQ8gVSTJNj75VfmAzBqlyVrKqybjRPfM7NyURHry3Xib7hqytXSxGAD1zP8');"></div>
+</div>
+<span class="text-[10px] font-medium text-zinc-400">Noir</span>
+</div>
+<!-- Filter: Sepia -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-14 h-14 rounded-xl border border-zinc-200 dark:border-white/10 overflow-hidden sepia">
+<div class="w-full h-full bg-cover bg-center" data-alt="Filter preview with sepia tones" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABrbXJA1PTVr0nxvSvrU7P6an9aTgJq8NDyyreHTb3wJZVcl968NV7BpehOHJNrVvCCoo6_alrjV8pRS1-CRGXLSldS_3ENgG2ndU1ALBQQ9DTnE5DyapEvH7EDaE-ez_zeRJ-sVtdM7hSjJXfbwmMz5OT7SggPo3lrRE_2OFiDMLLGlxxgkyrUdXcvpN_TEMz-8wyaN5bYdAXkK_XutYHFDmtBy57hy3yjEN1aTsXb8bytCahJpsDG3WiQTvJ3TRA7HjBdMwh7tM');"></div>
+</div>
+<span class="text-[10px] font-medium text-zinc-400">Classic</span>
+</div>
+<!-- Filter: Soft Blush -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-14 h-14 rounded-xl border border-zinc-200 dark:border-white/10 overflow-hidden brightness-110 contrast-90">
+<div class="w-full h-full bg-cover bg-center mix-blend-soft-light" data-alt="Filter preview with soft blush tones" style="background-color: #ffd6e7; background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDY6NZLCtApYEc2yi329hv-oJXHU2Yz2uELNDuFpLyRpVbtOGkgRC2yKe04w9W6Oi84YX58WPmYylRNuDrnVA7mTHBtx7tTzjEqd3G_69WTQwIOrgMyOGB0vKoxoH8C6lSNqjwaCSUT4e0zLULPuylPOguhqLU7BolOAS89F5Iv6ua4SJZyQTey_WqW_O-6hUzLfia-uLfVbFBiPEngY3iF0aBz1FRLc49faqh3ZOTVsxAYK909iYyEFmznqkJTXaqJgOKEQvoI5Uo');"></div>
+</div>
+<span class="text-[10px] font-medium text-zinc-400">Blush</span>
+</div>
+</div>
+</div>
+<!-- Tool Selection -->
+<div class="flex items-center justify-around">
+<button class="flex flex-col items-center gap-1 text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">image</span>
+<span class="text-[10px] font-semibold uppercase tracking-tighter">Photo</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">title</span>
+<span class="text-[10px] font-semibold uppercase tracking-tighter">Text</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">auto_fix_high</span>
+<span class="text-[10px] font-semibold uppercase tracking-tighter">Filters</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-semibold uppercase tracking-tighter">Layout</span>
+</button>
+</div>
+</footer>
+</body></html>

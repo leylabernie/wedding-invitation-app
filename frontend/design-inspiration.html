@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Design Inspiration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b6c",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221016",
+              },
+              fontFamily: {
+                "display": ["Noto Serif", "serif"],
+                "sans": ["Noto Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-chip {
+            background-color: #ee2b6c;
+            color: white;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }.masonry-grid {
+            column-count: 2;
+            column-gap: 1rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden pb-24">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-display font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Design Inspiration</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-12 w-12 bg-transparent text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl">filter_list</span>
+</button>
+</div>
+</div>
+<div class="px-4 py-2">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full shadow-sm bg-white dark:bg-slate-800">
+<div class="text-slate-400 flex border-none bg-transparent items-center justify-center pl-4 rounded-l-full border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-slate-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search ideas (e.g., 'rustic barn', 'gold foil')" value=""/>
+</div>
+</label>
+</div>
+<div class="flex gap-3 px-4 py-3 overflow-x-auto hide-scrollbar sticky top-[72px] z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm pb-4 pt-2">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full active-chip px-5 shadow-sm transition-transform active:scale-95 cursor-pointer">
+<p class="text-sm font-medium leading-normal whitespace-nowrap">All Ideas</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 shadow-sm transition-transform active:scale-95 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700">
+<p class="text-slate-700 dark:text-slate-200 text-sm font-medium leading-normal whitespace-nowrap">Real Weddings</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 shadow-sm transition-transform active:scale-95 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700">
+<p class="text-slate-700 dark:text-slate-200 text-sm font-medium leading-normal whitespace-nowrap">User Layouts</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 shadow-sm transition-transform active:scale-95 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700">
+<p class="text-slate-700 dark:text-slate-200 text-sm font-medium leading-normal whitespace-nowrap">Pro Tips</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 shadow-sm transition-transform active:scale-95 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700">
+<p class="text-slate-700 dark:text-slate-200 text-sm font-medium leading-normal whitespace-nowrap">Table Scapes</p>
+</div>
+</div>
+<div class="px-4 mt-2">
+<div class="masonry-grid">
+<div class="masonry-item relative group">
+<div class="rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative shadow-sm">
+<img alt="Elegant floral wedding table setting" class="w-full h-auto object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj7xOCsxSSrNF2mTLYhqxBsxyQ9fiOt6fVN3xQmZAos4jTqPxFmw_y1KIFV4VRAWybmGXh4iJPrX8Vt7rg3QYvgw6yPVEJd0wixsuqiSV8Chi9i27Lzobrw703C68VTYGgfOTp1AQoCdxLNGUzD-tfXBUNgEUw8pNB2TCoF3SHFNBchfAhUdm-cDbHJlSuRrTun4KUuXInpYNAyTh0UIsZhQf3RY6JOgQG4l9DYCWK96ePny3_7XiAXTXL7uKeScXwoG7jWbVTAPE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute top-2 right-2 p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-white active:scale-90 transition-all">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-200 text-lg">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3">
+<p class="text-white text-sm font-bold font-display drop-shadow-md">Sarah &amp; Mike's Outdoor Gala</p>
+<p class="text-white/90 text-xs font-medium drop-shadow-md">Real Weddings</p>
+</div>
+</div>
+</div>
+<div class="masonry-item relative group">
+<div class="rounded-xl overflow-hidden bg-orange-50 dark:bg-slate-800 relative shadow-sm p-4 flex flex-col gap-2">
+<span class="inline-block px-2 py-1 bg-orange-100 text-orange-700 rounded text-[10px] font-bold uppercase tracking-wider self-start">Pro Tip</span>
+<h3 class="text-slate-900 dark:text-white font-display font-bold text-lg leading-snug">Mixing Fonts Like a Pro</h3>
+<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Pair a strong serif header with a clean sans-serif body for maximum readability.</p>
+<div class="flex items-center justify-between mt-2">
+<span class="text-[10px] text-slate-500">Read more</span>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<div class="masonry-item relative group">
+<div class="rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative shadow-sm">
+<img alt="Minimalist desert rose invitation suite flatlay" class="w-full h-auto object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBORQP1KVyRP8U8fT3w8eg-u8qQRhqcZ2wIQ5RCGVOwj-69cyzRujwObndhp8lSuvOh7pNmqZfw2feeDWf4ic4ycqzD4b2IxHkc6k8pOtPPdoOxqY35Gb0Eeb8cS4CTcBH6YJgijfGGtTGCzbpkieZBRqP2r7gVBW8JKKZtdK4HRnDfssA_PtZ6cjGTaVsvWXgmVZ-ZWI4NEL_Wcd-LhCLa0Uz8kp5F2bPjlZmdZpCQPWjYRd2pHQ3qW8-naM7PKR_Rd7qmgf6lc1Y"/>
+<button class="absolute top-2 right-2 p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-white active:scale-90 transition-all">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-200 text-lg">favorite</span>
+</button>
+<div class="p-3 bg-white dark:bg-slate-800">
+<p class="text-slate-900 dark:text-white text-sm font-bold font-display">Desert Rose Suite</p>
+<div class="flex items-center gap-1 mt-1">
+<div class="w-4 h-4 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB51gmZcpR0r3kVdYEmdsMuuyzE8hKBdwQrEVbZnw13qcC8Gc8xMXaxeyX_15CYZAxs67sHSL5AW43g_l2nSQO-IJCVAPxvXlLitrhh-tXlO4xc8ACvyeKkuFbz5uFrBJJr6cmlfOv4jhMmRZfs0jiP2qZ4LdlqRTLb7GERNSLzbzp4sdLaOH2WU_ob33yfWqibGj1zI5Oa8ErEhXXJvU7_WJUxzzUF4RcWAyQxVfwHD-65DGL4Fu1ZbhmBVLVHPbAY-dy6EuVp_Cs"/>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs">by Jessica K.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="masonry-item relative group">
+<div class="rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative shadow-sm">
+<img alt="Dark floral wedding stationery" class="w-full h-auto object-cover block aspect-[4/3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuejQ4ZBZXLhXcIKFHLSF7uEY9eLlOVCoaSBZ7--hPHmeNR2vqI07JAytNrk2nIt_HfAKAE_rVBGxHzS2Qmyukt7ro5eHcSVOaeSyBzuug4apwdATl2OKuBwOVoqE_McT3GGg3Kwd1oyMe5AyV0kBUwjj2CpulgZYzTBc1mk9kBIWQ1cmvg_3mZZeDEUCVH0tavVXLsy8aPNR9Xp-eqenLINap2oW1D8quigucRH4zvKVqA8MMOoV_Kb0eqccCGLIrlcAWE4-Vx_Q"/>
+<button class="absolute top-2 right-2 p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-white active:scale-90 transition-all">
+<span class="material-symbols-outlined filled text-primary text-lg">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-white text-sm font-bold font-display">Moody Florals</p>
+</div>
+</div>
+</div>
+<div class="masonry-item relative group">
+<div class="rounded-xl overflow-hidden bg-primary/5 dark:bg-primary/10 border border-primary/10 relative shadow-sm p-5 text-center flex flex-col items-center justify-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">lightbulb</span>
+<p class="text-slate-800 dark:text-slate-100 text-sm font-medium italic">"Don't forget to include a map card for out-of-town guests!"</p>
+</div>
+</div>
+<div class="masonry-item relative group">
+<div class="rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative shadow-sm">
+<img alt="Cream and gold wedding invitation" class="w-full h-auto object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg0LYtoQCIZFgsXs_M2R1HAmZHZaB_jep-ua3cHQwe7EwYbb1EH6WlZTDY_1WMkSjwjKNVKYp11mVcgi59jNQFfmVlPviv30Nwty5Dx3UR8PW6mqxQJ-YLhsVw9b2AjFv6KiR8pTjjY9N1KO7-2p_rIhOryOaqgZ4qTiRFVYybi56ObliGAES2-xfTWMhORav_GqczHaIIy-PjxXYfCL_4pgpI9AWSadflankmoqWEJTvp296jo4CXspeiG7gJ7R1ayIL6KhZGjsQ"/>
+<button class="absolute top-2 right-2 p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-white active:scale-90 transition-all">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-200 text-lg">favorite</span>
+</button>
+<div class="p-3 bg-white dark:bg-slate-800">
+<p class="text-slate-900 dark:text-white text-sm font-bold font-display">Gold Foil Details</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">Printed on Cotton</p>
+</div>
+</div>
+</div>
+<div class="masonry-item relative group">
+<div class="rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative shadow-sm">
+<img alt="Rustic botanical wedding card" class="w-full h-auto object-cover block aspect-square" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByNYRxlgscOgWO9fmKc1ez6lDtNtTsW4gaymuXAO-17cxjJJJMKIiZ60hvlKh2aLy22gBsxIjP2TPLxCVCqh9sLz3qqWMWexjtEPPmHQ0yNqDhcDVN2IuoWFGnT7-K9i1P3OpgR4aOX6FW0kW60ttmRS2WNBQzWKxKVxLwzmojjrkCFXtA9NTxZ1GnZLA-LjBBguoPPmUa2QSRdQbfVvM3HbehhDz8b8qBPcJw7cvTZpr_IWhJobzsV66WSNyni0Yt8UuQ_QJUQdA"/>
+<button class="absolute top-2 right-2 p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-white active:scale-90 transition-all">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-200 text-lg">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+<p class="text-white text-sm font-bold font-display">Botanical Sketch</p>
+</div>
+</div>
+</div>
+<div class="masonry-item relative group">
+<div class="rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative shadow-sm">
+<img alt="Geometric modern wedding invite" class="w-full h-auto object-cover block aspect-[3/4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC09VQ4jzuI05B8PiVkeYRp6LnqyCrFqFgk-yaWsWTMMRAB3_Q68uqyUClqfpMIz4xx2PXqcmbWBQir_RO81aA75Niq3u3kClS2P3zGVdIddn1jW84BA-wrFN8TSEhJGcpfXgfLsph8neyBqvlLAEzNFpdckNFsshDr169Gp74sREQyZg277giTIKUIpx3gHHgLKavXo335LTn-TeEoPfNtRZZaBKlDb1QTDekjKtWRhy53hyZnOsdpn8pTi4oKNI5IYSf15wJbMN8"/>
+<button class="absolute top-2 right-2 p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-white active:scale-90 transition-all">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-200 text-lg">favorite</span>
+</button>
+<div class="p-3 bg-white dark:bg-slate-800">
+<p class="text-slate-900 dark:text-white text-sm font-bold font-display">Modern Copper</p>
+<div class="flex items-center gap-1 mt-1">
+<div class="w-4 h-4 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB51gmZcpR0r3kVdYEmdsMuuyzE8hKBdwQrEVbZnw13qcC8Gc8xMXaxeyX_15CYZAxs67sHSL5AW43g_l2nSQO-IJCVAPxvXlLitrhh-tXlO4xc8ACvyeKkuFbz5uFrBJJr6cmlfOv4jhMmRZfs0jiP2qZ4LdlqRTLb7GERNSLzbzp4sdLaOH2WU_ob33yfWqibGj1zI5Oa8ErEhXXJvU7_WJUxzzUF4RcWAyQxVfwHD-65DGL4Fu1ZbhmBVLVHPbAY-dy6EuVp_Cs"/>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs">by Alex P.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full flex justify-center py-6">
+<button class="text-slate-500 dark:text-slate-400 font-medium text-sm flex items-center gap-2 hover:text-primary transition-colors">
+                Load more inspiration
+                <span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 h-20 pb-4 flex items-center justify-around z-20">
+<div class="flex flex-col items-center gap-1 w-16">
+<span class="material-symbols-outlined text-slate-400">home</span>
+<span class="text-[10px] font-medium text-slate-400">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 w-16">
+<span class="material-symbols-outlined text-primary filled">grid_view</span>
+<span class="text-[10px] font-medium text-primary">Inspire</span>
+</div>
+<div class="flex flex-col items-center gap-1 w-16 relative">
+<div class="bg-primary rounded-full p-3 -mt-8 shadow-lg shadow-primary/40 flex items-center justify-center border-4 border-background-light dark:border-background-dark transform transition-transform active:scale-95 cursor-pointer">
+<span class="material-symbols-outlined text-white text-3xl">add</span>
+</div>
+<span class="text-[10px] font-medium text-slate-400 mt-1">Create</span>
+</div>
+<div class="flex flex-col items-center gap-1 w-16">
+<span class="material-symbols-outlined text-slate-400">favorite</span>
+<span class="text-[10px] font-medium text-slate-400">Saved</span>
+</div>
+<div class="flex flex-col items-center gap-1 w-16">
+<span class="material-symbols-outlined text-slate-400">settings</span>
+<span class="text-[10px] font-medium text-slate-400">Settings</span>
+</div>
+</div>
+</div>
+
+</body></html>

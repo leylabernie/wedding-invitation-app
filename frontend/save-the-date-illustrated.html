@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Save the Date: Illustrated Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e8309c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#21111a",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .watercolor-bg {
+            background: radial-gradient(circle at top left, #fff0f6, transparent),
+                        radial-gradient(circle at bottom right, #fdf2f8, transparent);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#181115] dark:text-white antialiased">
+<div class="relative flex h-screen w-full flex-col overflow-hidden max-w-md mx-auto bg-white dark:bg-background-dark shadow-2xl">
+<!-- Top App Bar -->
+<header class="flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between z-10 sticky top-0">
+<button class="text-[#181115] dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-[#181115] dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Edit Illustration</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-primary text-sm font-bold leading-normal tracking-wide">Done</button>
+</div>
+</header>
+<!-- Main Canvas Area -->
+<main class="flex-1 overflow-y-auto watercolor-bg dark:bg-background-dark p-6 flex flex-col items-center">
+<!-- Live Preview Card -->
+<div class="relative w-full aspect-[3/4] bg-white dark:bg-[#2d1a26] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col border border-pink-50 dark:border-white/5">
+<!-- Floral Framing Elements -->
+<div class="absolute top-0 left-0 w-32 h-32 opacity-80 pointer-events-none">
+<img class="w-full h-full object-contain object-top-left" data-alt="Delicate watercolor pink and white flowers framing the corner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYt8sblg6mmLvc--H4rscSZqWg8G1b249w0syZ8hJrO4Yyecy9SMcU_1EjSvr430ImYrfwNLHo0KjDRoLdHODQVfWbhU3JLKbJd_S75BnKDe9hlG7mUl2y2Iz5hmIdAA9jHR0mz7Vm_6V6UbN97cqYfXCKZUptxwLqs3mYtw9Knf_v6OOq-RxJTLd0c0woIXMrMI9OQ_Eo_rA1s7GshaW8kAUfWSLCOqaqhFykTVNHCr2650Be6hA0PBtjwedG0OXCWzxoShB10gI"/>
+</div>
+<div class="absolute bottom-0 right-0 w-32 h-32 opacity-80 pointer-events-none rotate-180">
+<img class="w-full h-full object-contain object-top-left" data-alt="Soft botanical watercolor leaves framing the bottom corner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrVLathKrrvqAP2vgyABQbpHQpz2RzdjVcKhECyveMcWEnKXsMiHG_aUp-Wsq4hVXqXlymU28CRX191NY8HibIcaCOC12_9jItfi5R9S4Rd_6Tz6rDcTK_whpW3RaPSSH77JJZAHfb4ebWaKeR1ViXDhYqjmUoI5uJAZRQ2Io8Ni5OnDp539NtwDuLTU7OLTqIyJDEh_mzkVEa9V3vOuMzyWp66MKVyuRnhX6jFUB3IXndO4ugJziK8yTLt05Y1PJ21EKX4XStGG8"/>
+</div>
+<!-- Card Content -->
+<div class="flex-1 flex flex-col items-center justify-center p-8 text-center gap-6 z-[2]">
+<div class="space-y-1">
+<p class="uppercase tracking-[0.2em] text-[10px] font-semibold text-primary/80">Save the Date</p>
+<div class="w-12 h-[1px] bg-primary/30 mx-auto mt-2"></div>
+</div>
+<div class="space-y-0">
+<h1 class="text-3xl font-light text-[#181115] dark:text-white">Sarah</h1>
+<p class="italic font-serif text-xl text-primary/60 my-1">&amp;</p>
+<h1 class="text-3xl font-light text-[#181115] dark:text-white">James</h1>
+</div>
+<div class="space-y-1 pt-2">
+<p class="text-sm font-medium tracking-wide">SEPTEMBER 24, 2024</p>
+<p class="text-xs text-[#886378] dark:text-gray-400">THE GRAND WILLOW VENUE</p>
+</div>
+<button class="mt-4 flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 text-xs font-medium text-primary hover:bg-primary/5">
+<span class="material-symbols-outlined text-sm">edit</span>
+                        Edit Text
+                    </button>
+</div>
+</div>
+<!-- Toolbar Overlay -->
+<div class="mt-6 flex gap-4 bg-white/90 dark:bg-white/10 backdrop-blur-xl p-2 rounded-full shadow-lg border border-white/20">
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-primary/10 text-primary">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-primary/10 text-[#886378] dark:text-gray-300">
+<span class="material-symbols-outlined">layers</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-primary/10 text-[#886378] dark:text-gray-300">
+<span class="material-symbols-outlined">palette</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-primary/10 text-[#886378] dark:text-gray-300">
+<span class="material-symbols-outlined">undo</span>
+</button>
+</div>
+</main>
+<!-- Illustration Library Drawer -->
+<section class="bg-white dark:bg-background-dark border-t border-[#e5dce1] dark:border-white/5 rounded-t-xl z-20">
+<div class="flex flex-col">
+<!-- Seasonal Filters -->
+<div class="flex gap-3 p-4 overflow-x-auto no-scrollbar scroll-smooth">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white pl-3 pr-5 shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">local_florist</span>
+<span class="text-sm font-semibold">Spring</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f4f0f3] dark:bg-white/5 pl-3 pr-5 text-[#181115] dark:text-white">
+<span class="material-symbols-outlined text-[20px]">wb_sunny</span>
+<span class="text-sm font-medium">Summer</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f4f0f3] dark:bg-white/5 pl-3 pr-5 text-[#181115] dark:text-white">
+<span class="material-symbols-outlined text-[20px]">eco</span>
+<span class="text-sm font-medium">Autumn</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f4f0f3] dark:bg-white/5 pl-3 pr-5 text-[#181115] dark:text-white">
+<span class="material-symbols-outlined text-[20px]">ac_unit</span>
+<span class="text-sm font-medium">Winter</span>
+</button>
+</div>
+<!-- Style Tabs -->
+<div class="flex border-b border-[#e5dce1] dark:border-white/5 px-4">
+<button class="flex-1 flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2">
+<p class="text-xs font-bold uppercase tracking-wider">Florals</p>
+</button>
+<button class="flex-1 flex flex-col items-center justify-center border-b-2 border-transparent text-[#886378] dark:text-gray-400 pb-3 pt-2">
+<p class="text-xs font-bold uppercase tracking-wider">Venue</p>
+</button>
+<button class="flex-1 flex flex-col items-center justify-center border-b-2 border-transparent text-[#886378] dark:text-gray-400 pb-3 pt-2">
+<p class="text-xs font-bold uppercase tracking-wider">Borders</p>
+</button>
+</div>
+<!-- Horizontal Library -->
+<div class="p-4 grid grid-cols-4 gap-3 h-32 overflow-hidden">
+<div class="relative group cursor-pointer aspect-square rounded-lg border-2 border-primary overflow-hidden bg-background-light dark:bg-white/5 p-1">
+<img class="w-full h-full object-cover rounded-md" data-alt="Close up of watercolor cherry blossoms" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvypVPpQyn4bPRI5f-v2rhme8bd_xWCZlJTAIz6p31VcEi752SvYwaxK5tCTgicfZFgm4Wv4bCAo5o8A51vmCeh51TNxTUr-Had-I76-2zj7ShF8g7dHJvw2Ilul7ArI-8yOmX98vVm7JfR8QoEX7orPViNqzBvfnX1bP9yIFqDB3XmY_Qsm7StxfPcCRcayqA38Jyh_5gg8ntPdL5G2i9tqw6ywkNiBoii5dEah_fpTCSaEeEFwbflIZh7VSWDvR9UJvL7o35TQM"/>
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">check_circle</span>
+</div>
+</div>
+<div class="group cursor-pointer aspect-square rounded-lg border border-transparent overflow-hidden bg-background-light dark:bg-white/5 p-1 hover:border-primary/30">
+<img class="w-full h-full object-cover rounded-md" data-alt="Soft purple watercolor wild flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd6ye3ynFpeMKw4VtawDhwdZ802PYcIFp6ht0bSSMLH36ONMDxdV3F6uiWE9MATQgSTukifNV862Ptwn5wWIEYSUQl_WNum0dgk6Xo7DgaPJfGAkOY3yX15_gR6aJroZVJ68SG3ytikDErX3jMcz9gkZbJVN2dyI5Mo1Clj3loCWGAY4fDWoHQ15ZL2Sj6gr07EdD6DN5o7VAQUkM9uPb-qlQE7zgSwnuG2Y8ODTSoq3yaUILYmpgHA0I63fjKPtWO8nYUDuC76Rs"/>
+</div>
+<div class="group cursor-pointer aspect-square rounded-lg border border-transparent overflow-hidden bg-background-light dark:bg-white/5 p-1 hover:border-primary/30">
+<img class="w-full h-full object-cover rounded-md" data-alt="Dainty white daisies in watercolor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9PM8mo7-uWcP65a5MKR3AWipV2HZuWCutqhozFAyyXXBViybfdq9n-vIis9o1xQa5Jgd1lfmZCJ5_G0n2-MmnyyzSvbEp_cOgzrPzntxRdmPQSUZO1sPSoo90p_beQyxd0IomVZEKEmJuhxc_YNJGzO0LL1B8-8TkKBajlkzbYUs2GoIXfrvQmPC378iMyYG0Ue9s-hYhWGDv3RkjryQCBG1j-bidOVayEBo2gqcOLSVnZNOxi73bghwMNBJUar5UG7Ps--Wztgc"/>
+</div>
+<div class="group cursor-pointer aspect-square rounded-lg border border-transparent overflow-hidden bg-background-light dark:bg-white/5 p-1 hover:border-primary/30">
+<img class="w-full h-full object-cover rounded-md" data-alt="Minimalist watercolor green vines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5ntTPp4taDorJPeH9GSjdrSQAD1RGdm-g1sxFuvH2MhsnvxkCQMSqHVPxfTkHHDM4aSXv_MhtZ0zFw7OKGnEQe33VuFnThsL3CPQFlkY4KqQAtqEIrA2gVVtD90xCl9953vS4Es_y_Q2YAytvWo4tzOvWXqduQwBGlGfEaK7TOt85eSrHh5RMia1KDzNnD4JQm2rZswmY0cp8FhoMa7zpOFYZheD1GbAVGtc7iici6h41hkVXf7RlHfmwEb5FtbW3o8rXwMkXo88"/>
+</div>
+</div>
+</div>
+<!-- Safe Area Bottom Bar (iOS style) -->
+<div class="h-6 w-full flex justify-center items-center pb-2">
+<div class="w-32 h-1 bg-gray-300 dark:bg-white/20 rounded-full"></div>
+</div>
+</section>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

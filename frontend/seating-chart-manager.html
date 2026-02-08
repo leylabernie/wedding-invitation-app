@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seating Chart Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#197fe6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white antialiased">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<button class="text-[#111418] dark:text-white flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-lg font-bold tracking-tight">Seating Chart</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-24">
+<!-- Unassigned Guests Section -->
+<section class="bg-white dark:bg-gray-900 py-4 shadow-sm">
+<div class="px-4 flex justify-between items-center mb-3">
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Unassigned Guests (12)</h3>
+<span class="text-xs font-medium text-primary">View All</span>
+</div>
+<div class="flex gap-3 px-4 overflow-x-auto no-scrollbar pb-2">
+<!-- Guest Chips -->
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 dark:bg-gray-800 px-4 border border-transparent active:border-primary active:bg-white transition-all cursor-grab active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-xs text-gray-400">drag_indicator</span>
+<p class="text-sm font-semibold">John Doe</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 dark:bg-gray-800 px-4 border border-transparent cursor-grab active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-xs text-gray-400">drag_indicator</span>
+<p class="text-sm font-semibold">Jane Smith</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 dark:bg-gray-800 px-4 border border-transparent cursor-grab active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-xs text-gray-400">drag_indicator</span>
+<p class="text-sm font-semibold">Alice B.</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 dark:bg-gray-800 px-4 border border-transparent cursor-grab active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-xs text-gray-400">drag_indicator</span>
+<p class="text-sm font-semibold">Bob White</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 dark:bg-gray-800 px-4 border border-transparent cursor-grab active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-xs text-gray-400">drag_indicator</span>
+<p class="text-sm font-semibold">C. Green</p>
+</div>
+</div>
+<p class="px-4 text-[10px] text-gray-400 mt-2 italic flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">info</span>
+                Drag guests to empty chairs on the floor plan below.
+            </p>
+</section>
+<!-- Floor Plan Canvas -->
+<section class="p-6 relative">
+<div class="mb-6 text-center">
+<h3 class="text-xl font-extrabold tracking-tight">Main Ballroom</h3>
+<p class="text-sm text-gray-500">Reception Floor Plan</p>
+</div>
+<div class="grid grid-cols-2 gap-8 items-center justify-items-center">
+<!-- Circular Table 1 -->
+<div class="relative group">
+<div class="w-32 h-32 rounded-full bg-white dark:bg-gray-800 border-4 border-primary/20 shadow-xl flex flex-col items-center justify-center transition-transform hover:scale-105">
+<span class="text-2xl font-black text-primary">1</span>
+<span class="text-[10px] font-bold text-gray-400 dark:text-gray-500">6/8 SEATS</span>
+</div>
+<!-- Chairs around Table 1 -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-primary shadow-md flex items-center justify-center text-[10px] text-white font-bold">JD</div>
+<div class="absolute top-4 -left-3 w-6 h-6 rounded-full bg-primary shadow-md"></div>
+<div class="absolute top-1/2 -left-5 -translate-y-1/2 w-6 h-6 rounded-full bg-primary shadow-md"></div>
+<div class="absolute bottom-4 -left-3 w-6 h-6 rounded-full bg-primary shadow-md"></div>
+<div class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full border-2 border-dashed border-primary/40 bg-primary/5"></div>
+<div class="absolute bottom-4 -right-3 w-6 h-6 rounded-full bg-primary shadow-md"></div>
+<div class="absolute top-1/2 -right-5 -translate-y-1/2 w-6 h-6 rounded-full bg-primary shadow-md"></div>
+<div class="absolute top-4 -right-3 w-6 h-6 rounded-full border-2 border-dashed border-primary/40 bg-primary/5"></div>
+</div>
+<!-- Rectangular Table 2 -->
+<div class="relative group">
+<div class="w-36 h-24 rounded-lg bg-white dark:bg-gray-800 border-4 border-gray-200 dark:border-gray-700 shadow-xl flex flex-col items-center justify-center transition-transform hover:scale-105">
+<span class="text-2xl font-black text-gray-300 dark:text-gray-600">2</span>
+<span class="text-[10px] font-bold text-gray-400">2/10 SEATS</span>
+</div>
+<!-- Chairs around Table 2 -->
+<div class="absolute -top-3 left-1/4 w-6 h-6 rounded-full border-2 border-dashed border-gray-300 bg-gray-50"></div>
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-primary shadow-md"></div>
+<div class="absolute -top-3 right-1/4 w-6 h-6 rounded-full border-2 border-dashed border-gray-300 bg-gray-50"></div>
+<div class="absolute -bottom-3 left-1/4 w-6 h-6 rounded-full border-2 border-dashed border-gray-300 bg-gray-50"></div>
+<div class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full border-2 border-dashed border-gray-300 bg-gray-50"></div>
+<div class="absolute -bottom-3 right-1/4 w-6 h-6 rounded-full border-2 border-dashed border-gray-300 bg-gray-50"></div>
+<div class="absolute top-1/2 -left-4 -translate-y-1/2 w-6 h-6 rounded-full border-2 border-dashed border-gray-300 bg-gray-50"></div>
+<div class="absolute top-1/2 -right-4 -translate-y-1/2 w-6 h-6 rounded-full bg-primary shadow-md"></div>
+</div>
+<!-- Circular Table 3 (Empty) -->
+<div class="relative group mt-8">
+<div class="w-28 h-28 rounded-full bg-white dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-700 shadow-sm flex flex-col items-center justify-center transition-transform hover:scale-105">
+<span class="text-xl font-black text-gray-200 dark:text-gray-700">3</span>
+<span class="text-[10px] font-bold text-gray-300">0/6 SEATS</span>
+</div>
+<!-- Chairs around Table 3 -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 border-dashed border-gray-200"></div>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-5 h-5 rounded-full border-2 border-dashed border-gray-200"></div>
+<div class="absolute top-1/4 -left-3 w-5 h-5 rounded-full border-2 border-dashed border-gray-200"></div>
+<div class="absolute bottom-1/4 -left-3 w-5 h-5 rounded-full border-2 border-dashed border-gray-200"></div>
+<div class="absolute top-1/4 -right-3 w-5 h-5 rounded-full border-2 border-dashed border-gray-200"></div>
+<div class="absolute bottom-1/4 -right-3 w-5 h-5 rounded-full border-2 border-dashed border-gray-200"></div>
+</div>
+<!-- Circular Table 4 (Full) -->
+<div class="relative group mt-8">
+<div class="w-28 h-28 rounded-full bg-primary/10 dark:bg-primary/20 border-4 border-primary shadow-xl flex flex-col items-center justify-center transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-primary mb-1">check_circle</span>
+<span class="text-[10px] font-black text-primary uppercase">Table 4 Full</span>
+</div>
+</div>
+</div>
+<!-- Floor Plan Legend -->
+<div class="mt-16 flex justify-center gap-6">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-[10px] font-semibold text-gray-500">Assigned</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full border-2 border-dashed border-gray-300 bg-gray-50"></div>
+<span class="text-[10px] font-semibold text-gray-500">Available</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-md bg-gray-200"></div>
+<span class="text-[10px] font-semibold text-gray-500">Obstacle</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Actions / Floating Bar -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm flex items-center justify-between bg-[#111418] dark:bg-white text-white dark:text-[#111418] rounded-2xl p-2 shadow-2xl z-50">
+<button class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 dark:hover:bg-black/5 rounded-xl transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-sm font-bold">Add Table</span>
+</button>
+<div class="w-[1px] h-8 bg-white/20 dark:bg-black/10"></div>
+<button class="flex items-center gap-2 px-4 py-2 hover:bg-white/10 dark:hover:bg-black/5 rounded-xl transition-colors">
+<span class="material-symbols-outlined">auto_fix</span>
+<span class="text-sm font-bold">Auto-Assign</span>
+</button>
+<button class="flex size-10 items-center justify-center bg-primary rounded-xl text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined">save</span>
+</button>
+</div>
+<!-- Background Decoration -->
+<div class="fixed inset-0 -z-10 pointer-events-none opacity-20 dark:opacity-10">
+<div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+</div>
+</body></html>

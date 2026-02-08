@@ -1,4 +1,4 @@
-# Wedding Invitation App - Full Stack Application
+# Wedding Invitation Bundle - Full Stack Application
 
 A beautiful, modern wedding invitation application built with Node.js backend and vanilla JavaScript frontend.
 
@@ -86,7 +86,7 @@ Or create a new account with any email and password (minimum 6 characters).
 ## 📁 Project Structure
 
 ```
-wedding-invitation-app/
+Wedding_Invitation_Bundle/
 ├── backend/
 │   ├── config/
 │   │   └── database.js          # Database configuration

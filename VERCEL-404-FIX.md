@@ -90,7 +90,7 @@ Added required dependencies to root `package.json`:
 npm i -g vercel
 
 # Deploy to Vercel
-cd wedding-invitation-app
+cd Wedding_Invitation_Bundle
 vercel --prod
 ```
 
@@ -110,7 +110,7 @@ vercel --prod
 ### Local Testing
 ```bash
 # Test API handler locally
-cd wedding-invitation-app/api
+cd Wedding_Invitation_Bundle/api
 node -e "const handler = require('./index.js'); console.log('✅ API handler loads successfully');"
 ```
 
@@ -135,7 +135,7 @@ Test these endpoints:
 
 ## 📁 Final Project Structure
 ```
-wedding-invitation-app/
+Wedding_Invitation_Bundle/
 ├── api/
 │   └── index.js          # Serverless function entry point
 ├── backend/              # Full backend code (for local development)

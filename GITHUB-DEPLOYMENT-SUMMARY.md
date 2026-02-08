@@ -2,7 +2,7 @@
 
 ## ✅ Successfully Deployed to GitHub
 
-**Repository**: https://github.com/leylabernie/wedding-invitation-app  
+**Repository**: https://github.com/leylabernie/Wedding_Invitation_Bundle
 **Status**: Production Ready  
 **Created Issue**: #1 - Application Successfully Deployed
 
@@ -17,7 +17,7 @@
 
 ### Project Structure
 ```
-wedding-invitation-app/
+Wedding_Invitation_Bundle/
 ├── backend/          # Complete Node.js API
 │   ├── config/       # Database configuration
 │   ├── middleware/   # Authentication middleware
@@ -38,13 +38,13 @@ wedding-invitation-app/
 
 ### 1. Vercel (Recommended - One Click)
 1. Connect GitHub account to [Vercel](https://vercel.com)
-2. Import: `leylabernie/wedding-invitation-app`
+2. Import: `leylabernie/Wedding_Invitation_Bundle`
 3. Deploy automatically with `vercel.json`
 
 ### 2. Manual Deployment
 ```bash
-git clone https://github.com/leylabernie/wedding-invitation-app.git
-cd wedding-invitation-app
+git clone https://github.com/leylabernie/Wedding_Invitation_Bundle.git
+cd Wedding_Invitation_Bundle
 cd backend && npm install
 npm start
 ```
@@ -80,8 +80,8 @@ While setting up production, you can still use the development version:
 - **Backend**: Available in the repository's backend folder
 
 ## 🔗 Quick Links
-- **GitHub Repository**: https://github.com/leylabernie/wedding-invitation-app
-- **Issue #1**: https://github.com/leylabernie/wedding-invitation-app/issues/1
+- **GitHub Repository**: https://github.com/leylabernie/Wedding_Invitation_Bundle
+- **Issue #1**: https://github.com/leylabernie/Wedding_Invitation_Bundle/issues/1
 - **Deployment Guide**: See DEPLOYMENT.md in repository
 
 ---

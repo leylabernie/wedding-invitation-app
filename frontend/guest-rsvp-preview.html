@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guest RSVP Preview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b6c",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221016",
+              },
+              fontFamily: {
+                "display": ["Noto Serif", "serif"],
+                "sans": ["Noto Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#181113] dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full max-w-[430px] mx-auto flex-col bg-white dark:bg-background-dark shadow-2xl overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-20 flex items-center bg-white/90 dark:bg-background-dark/90 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="text-[#181113] dark:text-white flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-[#181113] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12 font-serif">Digital RSVP Portal</h2>
+</div>
+<!-- Hero Image -->
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:py-3">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-white @[480px]:rounded-lg min-h-[320px] shadow-inner" data-alt="Elegant floral wedding invitation background with soft pink roses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwd-DVclmQrmq7sDWNeSDN31vY7s34wXA_kD2OSRaAWvHk6RyAmihgYqIsVsypAnJvWpeGZp6wJIl6ifwya-7bz55lXgxfoBsnLjOMx96AmdK68bZDES553r_lP1VyexmmQ4DjobZLvIFsPS90nI5iKiTcLc_370zgtDl0SBG1vRnZsJJrxsFMr-5JbUbWA1ryGcXg-8ZyDr0nQ3Me3wVqQWh2vDv1_ExDV20XiUYhLK_OQFZb2ZZD8ElUQrb4BGqmvSCecT-_fNg");'>
+</div>
+</div>
+</div>
+<!-- Welcome Message -->
+<div class="px-6 py-8 text-center">
+<span class="text-primary font-medium tracking-widest uppercase text-xs mb-2 block">Wedding Guest Preview</span>
+<h1 class="text-[#181113] dark:text-white tracking-light text-[32px] font-bold leading-tight pb-3 font-serif">Welcome, Sarah &amp; John</h1>
+<div class="w-12 h-0.5 bg-primary/30 mx-auto mb-4"></div>
+<p class="text-[#181113]/80 dark:text-white/80 text-base font-normal leading-relaxed">
+                The pleasure of your company is requested at the wedding of <span class="font-bold text-primary italic">Michael and Isabella</span>.
+            </p>
+<p class="mt-4 text-sm font-medium opacity-60">Saturday, September 24th, 2024</p>
+</div>
+<!-- RSVP Form Section -->
+<div class="px-6 pb-12 space-y-8">
+<!-- Attendance -->
+<div>
+<h3 class="text-[#181113] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-4 font-serif">Are you attending?</h3>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary transition-all">
+<span class="material-symbols-outlined mb-1">check_circle</span>
+<span class="font-bold">Will Attend</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined mb-1">cancel</span>
+<span class="font-bold opacity-70">Decline</span>
+</button>
+</div>
+</div>
+<!-- Meal Choice -->
+<div>
+<h3 class="text-[#181113] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-4 font-serif">Meal Choice</h3>
+<div class="space-y-3">
+<label class="flex items-center p-4 bg-background-light dark:bg-white/5 rounded-xl border border-transparent hover:border-primary/20 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-gray-300 focus:ring-primary" name="meal" type="radio"/>
+<div class="ml-4">
+<span class="block font-bold text-sm">Roasted Prime Rib</span>
+<span class="block text-xs opacity-60">Served with garlic mash and seasonal greens</span>
+</div>
+</label>
+<label class="flex items-center p-4 bg-background-light dark:bg-white/5 rounded-xl border border-transparent hover:border-primary/20 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-gray-300 focus:ring-primary" name="meal" type="radio"/>
+<div class="ml-4">
+<span class="block font-bold text-sm">Pan Seared Salmon</span>
+<span class="block text-xs opacity-60">Lemon dill butter and wild rice</span>
+</div>
+</label>
+<label class="flex items-center p-4 bg-background-light dark:bg-white/5 rounded-xl border border-transparent hover:border-primary/20 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-gray-300 focus:ring-primary" name="meal" type="radio"/>
+<div class="ml-4">
+<span class="block font-bold text-sm">Wild Mushroom Risotto (V)</span>
+<span class="block text-xs opacity-60">Truffle oil and shaved parmesan</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Song Request -->
+<div>
+<h3 class="text-[#181113] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-4 font-serif">Song Request</h3>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">music_note</span>
+<input class="w-full pl-12 pr-4 py-4 bg-background-light dark:bg-white/5 border-none rounded-xl focus:ring-2 focus:ring-primary/50 text-sm" placeholder="What song will get you dancing?" type="text"/>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-4">
+<button class="w-full bg-primary text-white font-bold py-5 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
+<span>Submit RSVP</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+<p class="text-center text-[10px] uppercase tracking-widest opacity-40 mt-6 font-sans">Powered by Wedding Suite Creator</p>
+</div>
+</div>
+<!-- Extra whitespace for mobile scrolling -->
+<div class="h-10"></div>
+</div>
+</body></html>

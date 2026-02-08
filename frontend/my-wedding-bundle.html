@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Wedding Bundle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b6c",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221016",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">body {
+    font-family: "Noto Sans", sans-serif;
+    min-height: max(884px, 100dvh)
+    }
+.font-display {
+    font-family: "Noto Serif", serif
+    }
+.qr-frame {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCaaux7Ws83XVYwnxxQKLUJzmVFeuS1eQe1srw09oB44pkbjiO8aHUmMaTdN1L_W_lzAzANRWSAyjwb6K7a_7J4hsou4wXaHcuBDtsFJ61wVzwsHvli2YFL-ORYOTDrckYm_D0LzIjM3HXTzz9RaXNFLrh_TzgZcpybVL0Jzesm-7WWg-9ssa6ZyT-PXwauMN4eht_MsEmGVKrNd6QSYYphbyMiF4Y-IhXzPZnopWLUOEyREFS5JOHmzEl3dcG9TpJMQKXwrgUXDVg)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen pb-48">
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between p-4 h-16">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<h1 class="font-display text-lg font-bold">My Wedding Bundle</h1>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+<div class="max-w-md mx-auto px-4 pt-6">
+<div class="mb-8 p-5 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-end mb-3">
+<div>
+<h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">Suite Progress</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">3 of 5 pieces completed</p>
+</div>
+<div class="text-primary font-bold text-xl">60%</div>
+</div>
+<div class="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 60%"></div>
+</div>
+<p class="text-xs text-slate-400 dark:text-slate-500 mt-3 italic flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">info</span>
+            Complete all pieces to unlock high-res downloads
+        </p>
+</div>
+<div class="mb-8 p-5 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">qr_code_2</span>
+<h2 class="font-display text-xl font-bold text-slate-900 dark:text-white">Share Digital RSVP</h2>
+</div>
+<div class="flex gap-5 items-center">
+<div class="relative flex-shrink-0 p-3 bg-white dark:bg-white rounded-lg shadow-inner">
+<div class="absolute inset-0 qr-frame opacity-40"></div>
+<div class="relative w-28 h-28 bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-7xl text-slate-800">qr_code_2</span>
+</div>
+<button class="absolute -bottom-2 -right-2 bg-primary text-white p-2 rounded-full shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-base leading-none">download</span>
+</button>
+</div>
+<div class="flex flex-col gap-3 flex-grow">
+<button class="flex items-center justify-between w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:bg-slate-100 transition-colors">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">link</span>
+                        Copy Link
+                    </span>
+<span class="material-symbols-outlined text-slate-400 text-sm">content_copy</span>
+</button>
+<button class="flex items-center justify-between w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:bg-slate-100 transition-colors">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                        Preview RSVP
+                    </span>
+<span class="material-symbols-outlined text-slate-400 text-sm">open_in_new</span>
+</button>
+<button class="flex items-center justify-center w-full px-4 py-2 bg-primary/10 text-primary rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-primary/20 transition-colors">
+                    Share directly
+                </button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="group relative flex flex-col gap-2">
+<div class="aspect-[3/4] w-full bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-md border-2 border-primary ring-4 ring-primary/5 transition-transform active:scale-95 cursor-pointer">
+<div class="w-full h-full bg-cover bg-center transition-transform group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCN0Dqwp5jb1lxQyNySUPZsOTMFmBYutxpNB1rWA3ZkJd_ZjwgtNWqttJUKevIe4mCo1yokNG8eX-oxw89Orh9j0YcmoHMW667LDX3g-4BYGonk4BYMRYV21yzKAP3choU7eZ3sozl_1d5L3sWG9koeI5ct5hTja6JPm9Z3vE7GoUVckSUvJCawnx104ceWM7m3ttEUf2LkMDyOt1Qvu9NmQTDzei-OE1KLnvSxy8Z19EqtkUXsXcP3DQrnsXU6cVWRQOygF3f3VTU')"></div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-xs font-bold">check</span>
+</div>
+</div>
+<div class="px-1">
+<p class="font-display font-bold text-sm leading-tight">Main Invitation</p>
+<p class="text-[10px] uppercase tracking-wider text-primary font-semibold">Completed</p>
+</div>
+</div>
+<div class="group relative flex flex-col gap-2">
+<div class="aspect-[3/4] w-full bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 transition-transform active:scale-95 cursor-pointer">
+<div class="w-full h-full bg-cover bg-center transition-transform group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCxAXvJx9tWl87laOd0eHzRc-RF3Oigvfclehzf6d4KeogDfkmHXUVbqnJsIdcHUAkXDluPElow29jRIMFKIk0ePotA_bn5yHFph9hd2Fuv7wat76L6DsvoLJ6lu7xNoWmKrwjsHt0Z-xKH0BQdChaacUhwrAzgfZc8k4J5SoKkzcwEiGVMPhkEOJbePxKaCTtUciRxd1PDIbZd6Y5YxQNuj4EmCL-3wBMhcVBfutL3Q53O0Bw6HCmwgMRUhXWzV5cU03ak8scOMQ')"></div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-xs font-bold">check</span>
+</div>
+</div>
+<div class="px-1">
+<p class="font-display font-bold text-sm leading-tight">RSVP Card</p>
+<p class="text-[10px] uppercase tracking-wider text-primary font-semibold">Completed</p>
+</div>
+</div>
+<div class="group relative flex flex-col gap-2">
+<div class="aspect-[3/4] w-full bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 transition-transform active:scale-95 cursor-pointer">
+<div class="w-full h-full bg-cover bg-center opacity-60 grayscale-[0.5]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLlEPjenA3xlAS7CWEGVOqVh55Q49M9wEtZ8ajlLfDNGNaB5buh26XLjqYBSLphC2l0TsXFLgwUtSV9Of0fVh_5f4fSp9V1dCaIm8A7lEAc4YabmArXKkrFD1-sSUqqyCfIhMQ_7M5fmdrXC46bvm22zW17wG7N_Vw9wjah5mNC8Arqa8-Nq7KRV3F8ICftSNJRmewM9C_CS2EB3jtk2A3LYGR1dCx1f5DFu_co169PGPJf1J-VuQWDNcJX2DyRiyAiG_Rqxe6zlw')"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/10">
+<div class="bg-white/90 dark:bg-slate-900/90 px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">EDITING</div>
+</div>
+</div>
+<div class="px-1">
+<p class="font-display font-bold text-sm leading-tight">Welcome Sign</p>
+<p class="text-[10px] uppercase tracking-wider text-slate-400">In Progress</p>
+</div>
+</div>
+<div class="group relative flex flex-col gap-2">
+<div class="aspect-[3/4] w-full bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border-2 border-dashed border-slate-200 dark:border-slate-700 transition-transform active:scale-95 cursor-pointer flex flex-col items-center justify-center gap-2 p-4 text-center">
+<div class="w-12 h-12 rounded-full bg-slate-50 dark:bg-slate-700 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">restaurant_menu</span>
+</div>
+<p class="text-xs font-medium text-slate-500">Menu Card</p>
+<span class="material-symbols-outlined text-primary text-xl">add_circle</span>
+</div>
+<div class="px-1">
+<p class="font-display font-bold text-sm leading-tight">Menu Card</p>
+<p class="text-[10px] uppercase tracking-wider text-slate-300">Not Started</p>
+</div>
+</div>
+<div class="group relative flex flex-col gap-2">
+<div class="aspect-[3/4] w-full bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border-2 border-dashed border-slate-200 dark:border-slate-700 transition-transform active:scale-95 cursor-pointer flex flex-col items-center justify-center gap-2 p-4 text-center">
+<div class="w-12 h-12 rounded-full bg-slate-50 dark:bg-slate-700 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">filter_1</span>
+</div>
+<p class="text-xs font-medium text-slate-500">Table Numbers</p>
+<span class="material-symbols-outlined text-primary text-xl">add_circle</span>
+</div>
+<div class="px-1">
+<p class="font-display font-bold text-sm leading-tight">Table Numbers</p>
+<p class="text-[10px] uppercase tracking-wider text-slate-300">Not Started</p>
+</div>
+</div>
+<div class="group relative flex flex-col gap-2">
+<div class="aspect-[3/4] w-full bg-primary/5 dark:bg-primary/10 rounded-xl border-2 border-dashed border-primary/30 flex flex-col items-center justify-center gap-2 transition-colors hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-3xl text-primary">post_add</span>
+<p class="text-xs font-bold text-primary px-4 text-center">Add Custom Piece</p>
+</div>
+</div>
+</div>
+<div class="p-4 bg-primary/10 dark:bg-primary/20 rounded-xl border border-primary/20 mb-8">
+<div class="flex gap-4 items-center">
+<div class="flex-shrink-0 w-12 h-12 bg-white dark:bg-slate-900 rounded-lg flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+</div>
+<div>
+<h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Style Check</h4>
+<p class="text-xs text-slate-600 dark:text-slate-400">All pieces currently match the "Bohemian Grace" theme.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 p-4 pb-8 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 flex flex-col gap-3">
+<div class="flex justify-between items-center px-2">
+<span class="text-sm font-medium text-slate-500">Full Bundle Pack</span>
+<span class="font-display font-bold text-lg text-slate-900 dark:text-white">$49.00</span>
+</div>
+<button class="w-full h-14 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">download</span>
+        Finalize &amp; Download
+    </button>
+</div>
+
+</body></html>
