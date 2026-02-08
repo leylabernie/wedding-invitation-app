@@ -1,5 +1,5 @@
 {
-  "name": "wedding-invitation-app",
+  "name": "Wedding_Invitation_Bundle",
   "version": "1.0.0",
   "description": "Full-stack wedding invitation application",
   "main": "api/index.js",

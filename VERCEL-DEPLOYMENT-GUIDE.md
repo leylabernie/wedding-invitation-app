@@ -22,7 +22,7 @@ The following warnings have been addressed:
 ### 1. Connect Repository to Vercel
 1. Go to [Vercel Dashboard](https://vercel.com/dashboard)
 2. Click "Add New..." → "Project"
-3. Import: `leylabernie/wedding-invitation-app`
+3. Import: `leylabernie/Wedding_Invitation_Bundle`
 4. Vercel will auto-detect the framework
 
 ### 2. Configure Environment Variables
